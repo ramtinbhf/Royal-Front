@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>موسسه حقوقی رویال - ROYAL LUXURY GROUPS</title>
+  </head>
+  <body class="font-yekanbakh">
+    <header class="w-full fixed top-0 z-[1000] flex flex-col bg-white">
+      <nav class="flex flex-col space-y-3 h-36 py-4" x-data="{open:false}">
+        <div class="container mx-auto px-4 flex items-center justify-stretch w-full">
+          <div class="w-full flex items-center gap-2">
+            <div>
+              <!-- logo -->
+              <a href="#">
+                <img class="w-64 h-auto" src="./images/logo.svg" alt="" />
+              </a>
+            </div>
+            <!-- search -->
+            <div class="w-full">
+              <input
+                class="bg-gray-100 w-full px-4 py-2 rounded-lg placeholder:text-xs placeholder:font-normal focus:ring-0 focus:outline-none"
+                type="search"
+                placeholder="جستجو کنید ..."
+              />
+            </div>
+          </div>
+          <div class="w-full flex justify-end">
+            <div class="ml-3 flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
+              <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
+              <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
+            </div>
+            <div>
+              <span>
+                <svg class="icon-cart fill-gray-700 w-6 h-6">
+                  <use xlink:href="https://www.technolife.ir/image/static_symbol-defs.svg#icon-cart"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto px-4">
+          <div class="flex items-center gap-9">
+            <button class="header-menu-button" x-on:click="open = !open">
+              <span>ویزا</span>
+              <svg
+                class="custom-transition"
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                x-bind:class="{'rotate-180':open}"
+              >
+                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <button class="header-menu-button">
+              <span>مهاجرت و اقامت</span>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <button class="header-menu-button">
+              <span>پذیرش تحصیلی</span>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <button class="header-menu-button">
+              <span>فرم‌ها و مدارک ها</span>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <button class="header-menu-button">تماس با ما</button>
+          </div>
+        </div>
+        <div class="relative" x-show="open" x-transition.scale.origin.right>
+          <div class="header-panel h-header-panel">fdsfds</div>
+        </div>
+        <div class="w-full static top-[7.5rem] -z-[1] bg-gray-900 text-white py-3 mb-[1px]"></div>
+      </nav>
+    </header>
+
+    <script src="./assets/js/alpinejs.min.js"></script>
+  </body>
+</html>

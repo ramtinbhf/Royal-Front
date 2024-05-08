@@ -1,0 +1,5 @@
+node_modules
+src
+package
+package-lock
+tailwind.config.js
