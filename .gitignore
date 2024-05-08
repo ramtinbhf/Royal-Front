@@ -1,5 +1,5 @@
 node_modules
 src
-package
-package-lock
+package.js
+package-lock.js
 tailwind.config.js
