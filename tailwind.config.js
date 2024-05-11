@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./app/**/*.{html,js}"],
   theme: {
+    container: {
+      padding: '3rem',
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -15,8 +18,6 @@ module.exports = {
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
 
-      '2xl': '1440px',
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       boxShadow: {

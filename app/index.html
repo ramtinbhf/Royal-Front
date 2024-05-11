@@ -8,35 +8,220 @@
   </head>
   <body class="font-yekanbakh">
     <header class="w-full fixed top-0 z-[1000] flex flex-col bg-white">
-      <nav class="flex flex-col space-y-3 h-36 py-4">
-        <div class="container mx-auto px-4 flex items-center justify-stretch w-full">
+      <nav class="flex flex-col space-y-3 h-36 xl:py-4">
+        <div class="xl:container xl:mx-auto px-8 py-4 xl:px-12 xl:py-0 flex items-center justify-stretch w-full" x-data="{ active: false }">
           <div class="w-full flex items-center gap-2">
             <div>
               <!-- logo -->
               <a href="#">
-                <img class="w-64 h-auto" src="./images/logo.svg" alt="" />
+                <img class="w-44 h-auto" src="./images/logo.svg" alt="" />
               </a>
             </div>
-            <!-- search -->
-            <div class="w-full">
-              <input class="bg-gray-100 w-full px-4 py-2 rounded-lg placeholder:text-xs placeholder:font-normal focus:ring-0 focus:outline-none" type="search" placeholder="جستجو کنید ..." />
-            </div>
           </div>
-          <div class="w-full flex justify-end">
+          <div class="w-full flex items-center justify-end gap-8" x-bind:class=" active && 'active z-40'">
             <div class="ml-3 flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
               <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
               <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
             </div>
+            <button class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active ">
+              <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out mb-3" :class="{'rotate-45 translate-y-0.5': active, 'mb-3': !active}"></span>
+              <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out" :class="{'-rotate-45': active}"></span>
+            </button>
+          </div>
+          <!-- panel -->
+          <div x-show="active" class="header-mobile-panel active" :class="{'active': active}">
             <div>
-              <span>
-                <svg class="icon-cart fill-gray-700 w-6 h-6">
-                  <use xlink:href="https://www.technolife.ir/image/static_symbol-defs.svg#icon-cart"></use>
-                </svg>
-              </span>
+              <ul class="mt-7 header-mobile-submenu-active" :class="activePanel !== null && 'header-mobile-submenu-active' " x-data="{activePanel: null}">
+                <li class="border-b border-gray-100 mx-4">
+                  <div x-data="{ expanded: false }">
+                    <div class="py-8 flex justify-between mx-4 font-semibold text-gray-900" x-on:click="expanded = !expanded">
+                      ویزا
+                      <img alt="" src="./images/arrow-icon.svg" class="rtl:rotate-0 rotate-180" />
+                    </div>
+
+                    <div class="fixed top-0 right-0 z-[60] w-full bg-gray-25 pb-4 min-h-[100dvh]" x-show="expanded">
+                      <div class="bg-white h-[100px] px-4 flex items-center gap-4 text-xl shadow-[0px_2px_15px_-3px_rgba(0,0,0,0.08)] relative">
+                        <img alt="" class="rotate-0 rtl:rotate-180" src="./images/arrow-left.svg" x-on:click="expanded = !expanded" />
+                        ویزا
+                      </div>
+
+                      <div class="overflow-y-auto h-[calc(100dvh)]">
+                        <div class="primary-menu">
+                          <div class="text-green-800 font-medium text-sm mb-9 relative before:content-[''] before:w-full before:h-[1px] before:bg-gray-100 before:absolute before:top-4 before:z-0">
+                            <span class="bg-white ltr:pr-3 rtl:pl-3 relative z-10"> محصولات ویژه </span>
+                          </div>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/databases">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                              دیتابیس ابری
+                              <span class="text-xs text-white bg-[#F43E88] rounded-[4px] px-2 xl:px-3 py-1 w-fit"> جدید </span>
+                            </span>
+
+                            <p class="text-gray-600 text-xs font-normal">راه&zwnj;اندازی و مدیریت دیتابیس بر بستر ابر</p>
+                          </a>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/cloud-server">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> سرور ابری </span>
+
+                            <p class="text-gray-600 text-xs font-normal">سرور ابری باقابلیت تنظیم دلخواه منابع</p>
+                          </a>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/cdn">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> شبکه توزیع محتوا </span>
+
+                            <p class="text-gray-600 text-xs font-normal">افزایش سرعت و امنیت وب&zwnj;سایت&zwnj;ها</p>
+                          </a>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/video-platform">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> میزبانی ویدیو </span>
+
+                            <p class="text-gray-600 text-xs font-normal">میزبانی و پخش فایل&zwnj;های صوتی و ویدویی</p>
+                          </a>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/cloud-storage">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> فضای ابری </span>
+
+                            <p class="text-gray-600 text-xs font-normal">ذخیره&zwnj;سازی فایل&zwnj;ها در فضای نامحدود ابری</p>
+                          </a>
+                          <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/paas">
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> کانتینر ابری </span>
+
+                            <p class="text-gray-600 text-xs font-normal">استقرار سریع و آسان نرم&zwnj;افزارها بر بستر داکر و کوبرنتیز</p>
+                          </a>
+                        </div>
+
+                        <div class="px-4 py-10">
+                          <div class="text-green-800 font-medium text-sm mb-3 relative before:content-[''] before:w-full before:h-[1px] before:bg-gray-100 before:absolute before:top-4 before:z-0 ltr:mr-6 rtl:ml-6">
+                            <span class="bg-gray-25 ltr:pr-3 rtl:pl-3 relative z-10"> دسته&zwnj;بندی براساس عملکرد </span>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">عملکرد و پایداری</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn" class="text-gray-600 text-base font-medium"> شبکه توزیع محتوا </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/dns" class="text-gray-600 text-base font-medium"> DNS ابری </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/load-balancing" class="text-gray-600 text-base font-medium"> توزیع بار وب </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/migmig" class="text-gray-600 text-base font-medium"> شتاب&zwnj;دهی محتوا </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/smart-routing" class="text-gray-600 text-base font-medium"> مسیریابی هوشمند </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">رایانش ابری</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="text-gray-600 text-base font-medium"> سرور ابری </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/paas" class="text-gray-600 text-base font-medium"> کانتینر ابری </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">امنیت</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/ddos" class="text-gray-600 text-base font-medium"> محافظت از DDoS </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/solutions/cloud-security" class="text-gray-600 text-base font-medium"> دیواره آتش وب </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/solutions/cloud-security" class="text-gray-600 text-base font-medium"> دیواره آتش </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/rate-limit" class="text-gray-600 text-base font-medium"> محدودیت درخواست </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/ssl" class="text-gray-600 text-base font-medium"> گواهینامه SSL/TLS </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/open-sesame" class="text-gray-600 text-base font-medium"> RKO </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">ذخیره&zwnj;سازی</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cloud-storage" class="text-gray-600 text-base font-medium"> آبجکت استورج </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cloud-server/block-storage" class="text-gray-600 text-base font-medium"> بلاک استورج </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">پلتفرم ویدیو</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/video-platform" class="text-gray-600 text-base font-medium"> میزبانی ویدیو </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/video-platform/live-streaming" class="text-gray-600 text-base font-medium"> پخش زنده </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/video-platform" class="text-gray-600 text-base font-medium"> میزبانی صدا </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/video-platform/video-player" class="text-gray-600 text-base font-medium"> پلیر ویدیو </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/video-platform/ads" class="text-gray-600 text-base font-medium"> تبلیغات ویدیویی </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">شبکه</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/l4-proxy" class="text-gray-600 text-base font-medium"> پروکسی لایه ۴ </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="text-gray-600 text-base font-medium"> دیواره آتش شبکه </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="text-gray-600 text-base font-medium"> IP شناور </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">ابزار و سرویس ها</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/api" class="text-gray-600 text-base font-medium"> API </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/cli" class="text-gray-600 text-base font-medium"> CLI </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/sdk" class="text-gray-600 text-base font-medium"> SDK </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/cloud-shell" class="text-gray-600 text-base font-medium"> Shell ابری </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/terraform" class="text-gray-600 text-base font-medium"> ترافرم </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://lib.arvancloud.ir/" class="text-gray-600 text-base font-medium"> کتابخانه CDN </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/docker" class="text-gray-600 text-base font-medium"> مخزن ایمیج&zwnj;های داکر </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/dev/linux-repository" class="text-gray-600 text-base font-medium"> مخزن نرم&zwnj;افزاری لینوکس </a>
+                            </div>
+                          </div>
+                          <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                            <div class="text-gray-900 font-bold text-sm mb-4">بینش</div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://radar.arvancloud.ir" class="text-gray-600 text-base font-medium"> رادار </a>
+                            </div>
+                            <div class="mb-2 last:mb-0">
+                              <a href="https://www.arvancloud.ir/fa/products/cdn/log-forwarding" class="text-gray-600 text-base font-medium"> ارسال لاگ </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto hidden xl:block">
           <ul class="flex items-center gap-9">
             <li class="relative" x-data="{ active : false }">
               <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
@@ -149,7 +334,8 @@
             </li>
           </ul>
         </div>
-        <div class="w-full static top-[7.5rem] -z-[1] bg-gray-900 text-white py-3 mb-[1px]"></div>
+
+        <div class="w-full static top-[7.5rem] -z-[1] bg-[#253343] text-white py-3 mb-[1px]"></div>
       </nav>
     </header>
 

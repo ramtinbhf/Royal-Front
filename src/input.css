@@ -80,6 +80,27 @@
 	.header-dropdown a:hover {
 		@apply bg-[#fff4e5] text-[#b3874b]
 	}
+	.header-mobile-panel {
+		--tw-bg-opacity: 1;
+		background-color: rgb(245 247 250 / var(--tw-bg-opacity));
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		height: calc(100dvh - 72px);
+		justify-content: space-between;
+		overflow-y: auto;
+		position: fixed;
+		top: 100px;
+		right: 0;
+		width: 100%;
+		z-index: 50;
+	}
+	.header-mobile-panel .primary-menu {
+		--tw-bg-opacity: 1;
+		background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+		margin-bottom: .25rem;
+		padding: 2.5rem 1rem 2.25rem;
+	}
 
 }
 @tailwind components;
