@@ -24,7 +24,7 @@ module.exports = {
         'navshadow': '0 1px 0 rgba(0,0,0,.14),0 2px 0 rgba(0,0,0,.05)',
       },
       fontFamily:{
-        yekanbakh:['Yekan Bakh']
+        yekanbakh:['yekanbakh-fa']
       }
     },
   },

@@ -1,66 +1,11 @@
 @font-face {
-	font-family: Yekan Bakh;
+	font-family: yekanbakh-fa;
 	font-style: normal;
-	font-weight: 100;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-Thin.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-thin.woff2') format('woff2');		
+	src: url('/app/fonts/woff/YekanBakhFaNum-VF.woff') format('woff'),   
+	url('/app/fonts/woff2/YekanBakhFaNum-VF.woff2') format('woff2');		
 }
 
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: 300;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-Light.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Light.woff2') format('woff2');	
-}
 
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: normal;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-Regular.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Regular.woff2') format('woff2');		 
-}
-
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: 600;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-SemiBold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-SemiBold.woff2') format('woff2');		 
-}
-
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: bold;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-Bold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Bold.woff2') format('woff2'); 
-}
-
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: 800;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-ExtraBold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-ExtraBold.woff2') format('woff2');		 
-}
-
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: 900;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-Black.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Black.woff2') format('woff2');		 
-}
-
-@font-face {
-	font-family: Yekan Bakh;
-	font-style: normal;
-	font-weight: 950;
-	src: url('./../app/fonts/woff/YekanBakhFaNum-ExtraBlack.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-ExtraBlack.woff2') format('woff2');		 
-}
 @tailwind base;
 
 @layer components{
@@ -90,7 +35,7 @@
 		justify-content: space-between;
 		overflow-y: auto;
 		position: fixed;
-		top: 100px;
+		top: 85px;
 		right: 0;
 		width: 100%;
 		z-index: 50;
@@ -100,6 +45,13 @@
 		background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 		margin-bottom: .25rem;
 		padding: 2.5rem 1rem 2.25rem;
+	}
+	.header-mobile-panel .primary-menu .item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 

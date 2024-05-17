@@ -1,89 +1,10 @@
 @font-face {
-  font-family: Yekan Bakh;
+  font-family: yekanbakh-fa;
 
   font-style: normal;
 
-  font-weight: 100;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-Thin.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-thin.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: 300;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-Light.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Light.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: normal;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-Regular.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: 600;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-SemiBold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-SemiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: bold;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-Bold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: 800;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-ExtraBold.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-ExtraBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: 900;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-Black.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-Black.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Yekan Bakh;
-
-  font-style: normal;
-
-  font-weight: 950;
-
-  src: url('./../app/fonts/woff/YekanBakhFaNum-ExtraBlack.woff') format('woff'),   
-	url('./../app/fonts/woff2/YekanBakhFaNum-ExtraBlack.woff2') format('woff2');
+  src: url('/app/fonts/woff/YekanBakhFaNum-VF.woff') format('woff'),   
+	url('/app/fonts/woff2/YekanBakhFaNum-VF.woff2') format('woff2');
 }
 
 /*
@@ -751,7 +672,7 @@ video {
   justify-content: space-between;
   overflow-y: auto;
   position: fixed;
-  top: 100px;
+  top: 85px;
   right: 0;
   width: 100%;
   z-index: 50;
@@ -762,6 +683,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   margin-bottom: .25rem;
   padding: 2.5rem 1rem 2.25rem;
+}
+
+.header-mobile-panel .primary-menu .item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .visible {
@@ -846,6 +775,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-9 {
   margin-bottom: 2.25rem;
 }
@@ -858,8 +791,12 @@ video {
   margin-left: 0.75rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -898,8 +835,8 @@ video {
   height: 1.5rem;
 }
 
-.h-\[100px\] {
-  height: 100px;
+.h-\[85px\] {
+  height: 85px;
 }
 
 .h-\[calc\(100dvh\)\] {
@@ -908,6 +845,10 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-\[calc\(90dvh\)\] {
+  height: calc(90dvh);
 }
 
 .min-h-\[100dvh\] {
@@ -926,8 +867,8 @@ video {
   width: 66.666667%;
 }
 
-.w-44 {
-  width: 11rem;
+.w-36 {
+  width: 9rem;
 }
 
 .w-6 {
@@ -991,6 +932,10 @@ video {
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -1070,6 +1015,11 @@ video {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -1083,6 +1033,11 @@ video {
 .bg-\[\#253343\] {
   --tw-bg-opacity: 1;
   background-color: rgb(37 51 67 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#BA9B6F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 155 111 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#F43E88\] {
@@ -1125,6 +1080,11 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-8 {
@@ -1182,8 +1142,12 @@ video {
   padding-right: 22px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-yekanbakh {
-  font-family: Yekan Bakh;
+  font-family: yekanbakh-fa;
 }
 
 .text-base {
@@ -1377,6 +1341,22 @@ video {
   outline-offset: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-44 {
+    width: 11rem;
+  }
+}
+
 @media (min-width: 1280px) {
   .xl\:mx-auto {
     margin-left: auto;
@@ -1418,6 +1398,10 @@ video {
 
 .ltr\:pr-3:where([dir="ltr"], [dir="ltr"] *) {
   padding-right: 0.75rem;
+}
+
+.rtl\:ml-2:where([dir="rtl"], [dir="rtl"] *) {
+  margin-left: 0.5rem;
 }
 
 .rtl\:ml-6:where([dir="rtl"], [dir="rtl"] *) {

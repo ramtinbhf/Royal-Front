@@ -14,16 +14,16 @@
             <div>
               <!-- logo -->
               <a href="#">
-                <img class="w-44 h-auto" src="./images/logo.svg" alt="" />
+                <img class="lg:w-44 w-36 h-auto" src="./images/logo.svg" alt="" />
               </a>
             </div>
           </div>
           <div class="w-full flex items-center justify-end gap-8" x-bind:class=" active && 'active z-40'">
-            <div class="ml-3 flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
+            <div class="ml-3 hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
               <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
               <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
             </div>
-            <button class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active ">
+            <button title="menu-mobile" class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active " >
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out mb-3" :class="{'rotate-45 translate-y-0.5': active, 'mb-3': !active}"></span>
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out" :class="{'-rotate-45': active}"></span>
             </button>
@@ -31,7 +31,7 @@
           <!-- panel -->
           <div x-show="active" class="header-mobile-panel active" :class="{'active': active}">
             <div>
-              <ul class="mt-7 header-mobile-submenu-active" :class="activePanel !== null && 'header-mobile-submenu-active' " x-data="{activePanel: null}">
+              <ul class="mt-2 header-mobile-submenu-active" :class="activePanel !== null && 'header-mobile-submenu-active' " x-data="{activePanel: null}">
                 <li class="border-b border-gray-100 mx-4">
                   <div x-data="{ expanded: false }" x-foo>
                     <div class="py-8 flex justify-between mx-4 font-semibold text-gray-900" x-on:click="expanded = !expanded">
@@ -40,28 +40,27 @@
                     </div>
 
                     <div class="fixed top-0 right-0 z-[60] w-full bg-gray-100 pb-4 min-h-[100dvh]" x-show="expanded">
-                      <div class="bg-white h-[100px] px-4 flex items-center gap-4 text-xl shadow-[0px_2px_15px_-3px_rgba(0,0,0,0.08)] relative">
+                      <div class="bg-white h-[85px] px-4 flex items-center gap-4 text-xl shadow-[0px_2px_15px_-3px_rgba(0,0,0,0.08)] relative">
                         <img alt="" class="rotate-0 rtl:rotate-180" src="./images/arrow-left.svg" x-on:click="expanded = !expanded" />
                         ویزا
                       </div>
 
-                      <div class="overflow-y-auto h-[calc(100dvh)]">
+                      <div class="overflow-y-auto h-[calc(90dvh)]">
                         <div class="primary-menu">
                           <div class="text-green-800 font-medium text-sm mb-9 relative before:content-[''] before:w-full before:h-[1px] before:bg-gray-100 before:absolute before:top-4 before:z-0">
-                            <span class="bg-white ltr:pr-3 rtl:pl-3 relative z-10"> محصولات ویژه </span>
+                            <span class="bg-white ltr:pr-3 rtl:pl-3 relative z-10"> ویزاهای ویژه </span>
                           </div>
                           <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/databases">
                             <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
-                              دیتابیس ابری
+                              ویزای انگلیس
                               <span class="text-xs text-white bg-[#F43E88] rounded-[4px] px-2 xl:px-3 py-1 w-fit"> جدید </span>
                             </span>
-
-                            <p class="text-gray-600 text-xs font-normal">راه&zwnj;اندازی و مدیریت دیتابیس بر بستر ابر</p>
+                            <p class="text-gray-600 text-xs font-normal">ویزای 10 ساله توریستی انگلیس</p>
                           </a>
                           <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/cloud-server">
-                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> سرور ابری </span>
+                            <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> ویزای شینگن </span>
 
-                            <p class="text-gray-600 text-xs font-normal">سرور ابری باقابلیت تنظیم دلخواه منابع</p>
+                            <p class="text-gray-600 text-xs font-normal">دریافت ویزای ایتالیا، فرانسه، سوئیس، اسپانیا</p>
                           </a>
                           <a class="item gap-x-4" href="https://www.arvancloud.ir/fa/products/cdn">
                             <span class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2"> شبکه توزیع محتوا </span>
@@ -219,6 +218,16 @@
                 </li>
               </ul>
             </div>
+            <div class="px-4 w-full mb-6">
+              <div class="sm:hidden flex items-center">
+                  <a class="font-bold text-[#BA9B6F] border-gray-300 w-1/2 rtl:ml-2 mr-2 rounded-lg h-10 text-center flex items-center justify-center border border-darkGreen-500" href="https://accounts.arvancloud.ir/login">
+                      ورود
+                  </a>
+                  <a class="bg-[#BA9B6F] rounded-lg text-white font-bold text-center flex items-center justify-center h-10 px-5 w-1/2" href="https://accounts.arvancloud.ir/register">
+                      ثبت&zwnj;نام
+                  </a>
+              </div>
+          </div>
           </div>
         </div>
         <div class="container mx-auto hidden xl:block">
