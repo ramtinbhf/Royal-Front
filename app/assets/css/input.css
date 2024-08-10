@@ -1,8 +1,7 @@
 @font-face {
 	font-family: yekanbakh-fa;
 	font-style: normal;
-	src: url('/app/fonts/woff/YekanBakhFaNum-VF.woff') format('woff'),   
-	url('/app/fonts/woff2/YekanBakhFaNum-VF.woff2') format('woff2');		
+	src: url('../../fonts/YekanBakhFaNum-VF.woff2') format('woff2');		
 }
 
 
