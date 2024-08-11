@@ -25,6 +25,9 @@ module.exports = {
       },
       fontFamily: {
         yekanbakh: ['yekanbakh-fa']
+      },
+      colors:{
+        'products-banner':'linear-gradient(90deg,#064e4b,#062023 64%)',
       }
     },
   },

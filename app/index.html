@@ -19,11 +19,11 @@
             </div>
           </div>
           <div class="w-full flex items-center justify-end gap-8" x-bind:class=" active && 'active z-40'">
-            <div class="ml-3 hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
+            <div class="hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
               <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
               <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
             </div>
-            <button title="menu-mobile" class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active " >
+            <button title="menu-mobile" class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active ">
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out mb-3" :class="{'rotate-45 translate-y-0.5': active, 'mb-3': !active}"></span>
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out" :class="{'-rotate-45': active}"></span>
             </button>
@@ -220,14 +220,10 @@
             </div>
             <div class="px-4 w-full mb-6">
               <div class="sm:hidden flex items-center">
-                  <a class="font-bold text-[#BA9B6F] border-gray-300 w-1/2 rtl:ml-2 mr-2 rounded-lg h-10 text-center flex items-center justify-center border border-darkGreen-500" href="https://accounts.arvancloud.ir/login">
-                      ورود
-                  </a>
-                  <a class="bg-[#BA9B6F] rounded-lg text-white font-bold text-center flex items-center justify-center h-10 px-5 w-1/2" href="https://accounts.arvancloud.ir/register">
-                      ثبت&zwnj;نام
-                  </a>
+                <a class="font-bold text-[#BA9B6F] border-gray-300 w-1/2 rtl:ml-2 mr-2 rounded-lg h-10 text-center flex items-center justify-center border border-darkGreen-500" href="https://accounts.arvancloud.ir/login"> ورود </a>
+                <a class="bg-[#BA9B6F] rounded-lg text-white font-bold text-center flex items-center justify-center h-10 px-5 w-1/2" href="https://accounts.arvancloud.ir/register"> ثبت&zwnj;نام </a>
               </div>
-          </div>
+            </div>
           </div>
         </div>
         <div class="container mx-auto hidden xl:block">
@@ -343,17 +339,306 @@
             </li>
           </ul>
         </div>
-
       </nav>
     </header>
-    <div class="w-full top-[7.5rem] -z-[1] bg-[#253343] text-white py-3 mb-[1px]"></div>
-    <!-- slider -->
-     <section>
-      <div>
-        <img src="./images/d13d19a4-b9d7-4779-9fde5d-3d1ecd4e3e4b.jpg" alt="">
+    <!-- info -->
+    <div class="w-full top-[7.5rem] -z-[1] bg-[#253343] text-white py-3 mb-[1px]">
+      <div class="container px-8 xl:px-12 mx-auto flex gap-x-3">
+        <div class="bg-[#BA9B6F] text-xs text-white px-3 py-1 rounded-[4px] hidden md:block cursor-default">جدید</div>
+        <a href="https://www.arvancloud.ir/fa/devops" class="text-white text-base"> خدمات رویال گروپ؛ تجربه‌ای راحت برای دریافت ویزای انگلیس ۱۰ ساله </a>
+        <img src="./images/arrow-left-w.svg" alt="arrow" width="24" height="24" />
       </div>
-     </section>
+    </div>
+    <!-- slider -->
+    <section>
+      <div>
+        <img src="./images/d13d19a4-b9d7-4779-9fde5d-3d1ecd4e3e4b.jpg" alt="" />
+      </div>
+    </section>
 
+    <!-- footer -->
+    <section class="relative py-24 lg:py-32 products-banner" id="seventh-section">
+      <div class="container mx-auto px-8 xl:px-12">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap justify-between">
+          <div class="flex flex-col gap-y-6 w-full lg:w-2/3 mb-12 lg:mb-0 z-10">
+            <h2 class="text-white text-3xl lg:text-[2rem] rtl:xl:text-4xl ltr:xl:text-[2.5rem] ltr:leading-[48px] font-semibold">فقط یک کلیک تا ساخت سرور ابری فاصله دارید</h2>
+            <div class="text-[#bfeeee] text-base font-normal">سرور ابری آروان با ارایه&zwnj;ی طیف گسترده&zwnj;ای از ویژگی&zwnj;ها و امکانات کاربردی، می&zwnj;تواند در کم&zwnj;ترین زمان و با هزینه&zwnj;ای مقرون به&zwnj;صرفه همه&zwnj;ی نیازهای زیرساختی شما را برطرف کند.</div>
+          </div>
+          <div class="flex lg:flex-col justify-center gap-x-3 lg:gap-y-4 z-20">
+            <a href="https://panel.arvancloud.ir/ecc" class="w-44 h-10 text-base font-semibold lg:w-56 lg:h-12 rounded-lg flex justify-center items-center transition-colors bg-white text-darkGreen-200 hover:bg-gray-50"> سرور ابری بسازید </a>
+            <a href="https://www.arvancloud.ir/fa/contact/sales" class="w-44 h-10 text-base font-semibold lg:w-56 lg:h-12 rounded-lg flex justify-center items-center transition-colors text-white border border-white hover:bg-[#005b5b]"> تماس با فروش </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bg-slate-200 py-20">
+        <div class="container mx-auto px-8 xl:px-12">
+          <div class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
+            <div>
+              <div class="mb-6 text-xl font-semibold text-teal-600">محصولات</div>
+
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/products/cloud-server"> سرور ابری </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/products/cdn"> شبکه توزیع محتوا </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/products/video-platform"> سرویس میزبانی ویدیو </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/products/cloud-storage"> فضای ابری </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/products/paas"> کانتینر ابری </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-6 text-xl font-semibold text-teal-600">راهکارها</div>
+
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/enterprise"> خدمات سازمانی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/solutions/banking-cdn"> CDN بانکی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/solutions/cloud-security"> امنیت ابری </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/solutions/financial-services"> خدمات مالی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/solutions/cryptocurrency"> ارز دیجیتال </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-6 text-xl font-semibold text-teal-600">منابع</div>
+
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/faq"> ﭘﺮﺳﺶ‌ﻫﺎی راﯾﺞ </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://arvancloudstatus.ir/"> وضعیت سرویس </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://academy.arvancloud.ir/"> دوره آموزشی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://radar.arvancloud.ir"> رادار ابر آروان </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/dev/ips"> نشانی‌های IP </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-6 text-xl font-semibold text-teal-600">آروان</div>
+
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/about"> درباره آروان </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/csr"> مسوولیت اجتماعی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/csr/impact"> دغدغه‌ اجتماعی </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/culture/transparent-salary"> حقوق شفاف </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/jobs"> فرصت‌های شغلی </a>
+                  <span class="text-xs text-white bg-[#F43E88] rounded-[4px] px-2 xl:px-3 py-1 w-fit"> در حال جذب </span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-6 text-xl font-semibold text-teal-600">ارتباطات</div>
+
+              <div class="flex flex-col gap-5">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://tech.arvancloud.ir"> آروان‌تک </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/press"> در رسانه‌ها </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/events"> رویدادهای ابری </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/csr/startup-grants"> حمایت از استارت‌آپ‌ها </a>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center gap-2">
+                  <a class="footer-link" href="https://www.arvancloud.ir/fa/landing/bug-bounty"> مسابقه کشف باگ </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-300 py-6">
+        <div class="container mx-auto px-8 xl:px-12 flex flex-col-reverse md:flex-col">
+          <div class="flex rtl:flex-col-reverse ltr:flex-col ltr:md:flex-row rtl:md:flex-row md:items-center md:justify-between md:pb-8 md:border-gray-200 md:border-b-[1.5px]">
+            <div class="flex rtl:justify-between ltr:justify-center md:justify-between ltr:order-2 pt-6 md:pt-0">
+              <div class="flex items-center justify-center">
+                <a href="https://twitter.com/ArvanCloud_fa" target="_blank" rel="noreferrer noopener" class="text-teal-600 transition w-10 h-10 flex items-center justify-center text-center hover:bg-gray-200 bg-transparent rounded-lg" aria-label="ArvanCloud Twitter Link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_19101_2692)">
+                      <path d="M13.8615 10.4643L21.1431 2H19.4176L13.095 9.34942L8.04512 2H2.2207L9.85708 13.1136L2.2207 21.9897H3.94631L10.6232 14.2285L15.9562 21.9897H21.7806L13.8611 10.4643H13.8615ZM11.498 13.2115L10.7243 12.1049L4.56807 3.29901H7.2185L12.1867 10.4056L12.9604 11.5123L19.4184 20.7498H16.768L11.498 13.212V13.2115Z" fill="#465A71"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_19101_2692">
+                        <rect width="19.5599" height="20" fill="white" transform="translate(2.2207 2)"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/arvancloud" target="_blank" rel="noreferrer noopener" class="text-teal-600 transition w-10 h-10 flex items-center justify-center text-center hover:bg-gray-200 bg-transparent rounded-lg" aria-label="ArvanCloud Instagram Link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.3195 12C15.3195 12.5696 15.1505 13.1264 14.8341 13.6C14.5176 14.0737 14.0678 14.4428 13.5416 14.6608C13.0153 14.8788 12.4363 14.9358 11.8776 14.8247C11.3189 14.7135 10.8058 14.4392 10.403 14.0365C10.0002 13.6337 9.72592 13.1205 9.61479 12.5619C9.50367 12.0032 9.5607 11.4241 9.77868 10.8979C9.99666 10.3716 10.3658 9.92183 10.8394 9.60537C11.313 9.28891 11.8698 9.12 12.4395 9.12C13.203 9.12087 13.935 9.42458 14.475 9.9645C15.0149 10.5044 15.3186 11.2364 15.3195 12ZM21.4395 8.04V15.96C21.4379 17.2962 20.9065 18.5773 19.9616 19.5221C19.0167 20.467 17.7357 20.9985 16.3995 21H8.47945C7.14323 20.9985 5.86216 20.467 4.91731 19.5221C3.97245 18.5773 3.44097 17.2962 3.43945 15.96V8.04C3.44097 6.70377 3.97245 5.42271 4.91731 4.47785C5.86216 3.533 7.14323 3.00151 8.47945 3H16.3995C17.7357 3.00151 19.0167 3.533 19.9616 4.47785C20.9065 5.42271 21.4379 6.70377 21.4395 8.04ZM16.7595 12C16.7595 11.1456 16.5061 10.3104 16.0314 9.59994C15.5567 8.88952 14.882 8.33581 14.0926 8.00884C13.3033 7.68187 12.4347 7.59632 11.5967 7.76301C10.7587 7.9297 9.98891 8.34114 9.38475 8.9453C8.78059 9.54946 8.36915 10.3192 8.20246 11.1572C8.03577 11.9952 8.12132 12.8638 8.44829 13.6532C8.77526 14.4426 9.32897 15.1173 10.0394 15.5919C10.7498 16.0666 11.585 16.32 12.4395 16.32C13.5848 16.3187 14.6828 15.8631 15.4927 15.0533C16.3026 14.2434 16.7582 13.1453 16.7595 12ZM18.1995 7.32C18.1995 7.1064 18.1361 6.89759 18.0174 6.71998C17.8988 6.54238 17.7301 6.40395 17.5328 6.32221C17.3354 6.24047 17.1183 6.21908 16.9088 6.26075C16.6993 6.30242 16.5068 6.40528 16.3558 6.55632C16.2047 6.70737 16.1019 6.8998 16.0602 7.1093C16.0185 7.3188 16.0399 7.53595 16.1217 7.7333C16.2034 7.93064 16.3418 8.09932 16.5194 8.21799C16.697 8.33666 16.9058 8.4 17.1195 8.4C17.4059 8.4 17.6806 8.28621 17.8831 8.08368C18.0857 7.88114 18.1995 7.60643 18.1995 7.32Z"
+                      fill="#465A71"
+                    ></path>
+                  </svg>
+                </a>
+                <a href="https://t.me/arvancloud" target="_blank" rel="noreferrer noopener" class="text-teal-600 transition w-10 h-10 flex items-center justify-center text-center hover:bg-gray-200 bg-transparent rounded-lg" aria-label="ArvanCloud Telegram Link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_19101_2683" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="2" y="3" width="20" height="18">
+                      <rect x="2" y="3" width="20" height="18" fill="#B2C2D6"></rect>
+                    </mask>
+                    <g mask="url(#mask0_19101_2683)">
+                      <path
+                        d="M2.33317 11.6799L6.70136 13.2523L8.4042 18.5413C8.47824 18.8986 8.92246 18.9701 9.21861 18.7557L11.6618 16.8259C11.8839 16.6115 12.2541 16.6115 12.5503 16.8259L16.9184 19.8993C17.2146 20.1137 17.6588 19.9707 17.7329 19.6134L20.9905 4.60405C21.0645 4.24669 20.6943 3.88933 20.3241 4.03227L2.33317 10.7507C1.88894 10.8937 1.88894 11.5369 2.33317 11.6799ZM8.1821 12.4661L16.7704 7.3915C16.9184 7.32002 17.0665 7.53445 16.9184 7.60592L9.88494 13.967C9.66283 14.1814 9.44071 14.4673 9.44071 14.8247L9.21861 16.54C9.21861 16.7545 8.84842 16.8259 8.77438 16.54L7.88593 13.3952C7.66382 13.0379 7.81191 12.609 8.1821 12.4661Z"
+                        fill="#465A71"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/arvancloud-fa" target="_blank" rel="noreferrer noopener" class="text-teal-600 transition w-10 h-10 flex items-center justify-center text-center hover:bg-gray-200 bg-transparent rounded-lg" aria-label="ArvanCloud Linkdin Link">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.42528 2.5C2.95881 2.5 2 3.45698 2 4.7148C2 5.94484 2.93025 6.92912 4.36901 6.92912H4.39684C5.892 6.92912 6.82249 5.94484 6.82249 4.7148C6.79454 3.45698 5.892 2.5 4.42528 2.5Z" fill="#465A71"></path>
+                    <path d="M2.25391 8.67969H6.54102V21.4976H2.25391V8.67969Z" fill="#465A71"></path>
+                    <path d="M17.0649 8.38281C14.7521 8.38281 13.2013 10.5425 13.2013 10.5425V8.68365H8.91406V21.5016H13.2011V14.3435C13.2011 13.9603 13.229 13.5777 13.3423 13.3037C13.6522 12.5385 14.3575 11.7458 15.5419 11.7458C17.0932 11.7458 17.7136 12.9212 17.7136 14.6444V21.5016H22.0004V14.152C22.0004 10.2149 19.8853 8.38281 17.0649 8.38281Z" fill="#465A71"></path>
+                  </svg>
+                </a>
+                <a href="https://git.arvancloud.ir/arvancloud/" target="_blank" rel="noreferrer noopener" class="text-teal-600 transition w-10 h-10 flex items-center justify-center text-center hover:bg-gray-200 bg-transparent rounded-lg" aria-label="ArvanCloud Instagram Link">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.0382 13.9172L26.009 13.8426L23.1822 6.4653C23.1247 6.32071 23.0229 6.19805 22.8913 6.11493C22.7597 6.03321 22.6062 5.99386 22.4515 6.00217C22.2968 6.01049 22.1483 6.06607 22.0262 6.16143C21.9055 6.25951 21.8179 6.39243 21.7753 6.54208L19.8667 12.3816H12.1379L10.2292 6.54208C10.1878 6.39161 10.1 6.25803 9.97833 6.16034C9.85622 6.06499 9.70779 6.00941 9.55308 6.00109C9.39838 5.99278 9.24484 6.03213 9.11321 6.11384C8.98196 6.1973 8.88021 6.31985 8.82232 6.46422L5.99013 13.8383L5.96201 13.9129C5.55509 14.9761 5.50486 16.1429 5.8189 17.2371C6.13294 18.3314 6.79424 19.2939 7.70307 19.9796L7.7128 19.9871L7.73875 20.0055L12.0449 23.2302L14.1752 24.8426L15.4729 25.8224C15.6247 25.9376 15.8101 26 16.0007 26C16.1912 26 16.3766 25.9376 16.5284 25.8224L17.8261 24.8426L19.9564 23.2302L24.2885 19.986L24.2993 19.9774C25.2061 19.2916 25.8659 18.3301 26.1794 17.2373C26.493 16.1445 26.4434 14.9795 26.0382 13.9172Z"
+                      fill="#465A71"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="block md:hidden">
+                <div class="flex justify-center items-center rounded p-[10px] relative before:content-[''] before:absolute before:w-full before:h-full before:left-0 before:right-0 before:bg-gray-300 before:opacity-20 before:rounded">
+                  <img referrerpolicy="origin" id="rgvjwlaojzpewlaoapfuwlao" style="cursor: pointer" onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=347454&amp;p=xlaoaodsjyoeaodsdshwaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt="logo-samandehi" src="/images/v6/footer/samandehi.webp" class="z-20" width="46" height="46" />
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between sm:justify-center ltr:order-1 pb-6 md:pb-0 border-b-gray-200 border-b md:border-none">
+              <div class="flex items-center">
+                <a class="text-xs font-medium text-gray-900 lg:text-sm" href="https://www.arvancloud.ir/fa/legal/terms"> شرایط استفاده از خدمات </a>
+
+                <span class="mx-2 h-4 w-[1px] bg-gray-800"></span>
+
+                <a class="text-xs font-medium text-gray-900 lg:text-sm" href="https://www.arvancloud.ir/fa/legal/sla"> توافق‌نامه‌ سطح خدمات </a>
+
+                <span class="mx-2 h-4 w-[1px] bg-gray-800"></span>
+
+                <a class="text-xs font-medium text-gray-900 lg:text-sm" href="https://www.arvancloud.ir/fa/legal/privacy-policy"> سیاست حفظ حریم خصوصی </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-10 md:mb-0">
+            <div class="flex items-start rtl:gap-4 ltr:order-2 mt-0 md:mt-6">
+              <div
+                x-data="{
+      open: false,
+      toggle() {
+          if (this.open) {
+              return this.close()
+          }
+  
+          this.$refs.button.focus()
+  
+          this.open = true
+      },
+      close(focusAfter) {
+          if (!this.open) return
+  
+          this.open = false
+  
+          focusAfter &amp;&amp; focusAfter.focus()
+      }
+  }"
+                x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+                x-id="['dropdown-button']"
+                class="relative flex items-center"
+              >
+                <!-- Button -->
+                <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')" type="button" class="footer-language bg-gray-50 rounded-md px-3 h-10 gap-2 flex items-center text-sm font-medium" dir="rtl" aria-expanded="false" aria-controls="dropdown-button-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z" stroke="#344456" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22 12H2" stroke="#344456" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22C14.5013 19.2616 15.9228 15.708 16 12C15.9228 8.29203 14.5013 4.73835 12 2Z" stroke="#344456" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  <span class="pt-1 min-w-[66px] text-start"> فارسی </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="footer-language-arrow text-green-500">
+                    <path d="M4.47625 9.80437C4.21625 9.54437 4.21625 9.12437 4.47625 8.86437L7.53625 5.80438C7.79625 5.54438 8.21625 5.54438 8.47625 5.80438L11.5362 8.86437C11.7962 9.12437 11.7962 9.54437 11.5362 9.80437C11.2762 10.0644 10.8562 10.0644 10.5962 9.80437L8.00292 7.21771L5.41625 9.80437C5.15625 10.0644 4.72958 10.0577 4.47625 9.80437Z" fill="#344456"></path>
+                  </svg>
+                </button>
+
+                <!-- Panel -->
+                <div x-ref="panel" x-show="open" x-transition.origin.top.left="" x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" class="absolute bottom-4 left-0 mb-8 w-full overflow-hidden rounded bg-white p-2 shadow-md" id="dropdown-button-3" style="display: none">
+                  <div>
+                    <a href="#" class="block w-full rounded-lg px-4 py-2 text-center text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500"> English </a>
+                    <a href="#" class="block w-full rounded-lg px-4 py-2 text-center text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500"> العربية </a>
+                    <a href="#" class="block w-full rounded-lg px-4 py-2 text-center text-sm font-medium text-gray-600 transition hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500"> Türkçe </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden lg:block">
+                <div class="flex justify-center items-center rounded p-[10px] relative before:content-[''] before:absolute before:w-full before:h-full before:left-0 before:right-0 before:bg-gray-300 before:opacity-20 before:rounded">
+                  <!-- <img referrerpolicy="origin" id="rgvjwlaojzpewlaoapfuwlao" style="cursor: pointer" onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=347454&amp;p=xlaoaodsjyoeaodsdshwaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt="logo-samandehi" src="/images/v6/footer/samandehi.webp" width="46" height="46" class="z-20" /> -->
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center ltr:order-1">
+              <a class="text-green-500 hover:text-teal-600 transition" href="https://www.arvancloud.ir/fa" aria-label="ArvanCloud Logo">
+                <svg width="153" height="28" viewBox="0 0 153 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M96.4609 10.0787C94.8101 10.0787 93.9849 10.9039 93.9849 12.5549V14.3086C93.9849 15.8357 94.7276 16.5784 96.2547 16.5784H101.826V18.4355H96.3576C93.2417 18.4355 91.7148 16.9087 91.7148 13.7927V13.1737C91.7148 9.85158 93.3449 8.2215 96.667 8.2215H97.5748C98.2971 8.2215 99.432 8.24215 101.496 8.38667L101.33 10.2439C99.3291 10.0993 98.1938 10.0787 97.5748 10.0787H96.4609ZM41.1707 11.9355C41.1707 9.43865 39.9533 8.22117 37.4564 8.22117H31.8851V9.97512H37.2502C38.4264 9.97512 39.0042 10.5529 39.0042 11.7291V16.6816H33.763C33.1439 16.6816 32.8345 16.3719 32.8345 15.7528V14.6795C32.8345 14.0608 33.1442 13.7508 33.763 13.7508H39.4168V11.9968H33.9694C31.7616 11.9968 30.668 13.0904 30.668 15.2983C30.668 17.4235 31.679 18.4349 33.7426 18.4349H38.1793C40.1807 18.4349 41.1711 17.4445 41.1711 15.4428V11.9355H41.1707ZM46.2261 11.8323C46.2261 10.5942 46.8452 9.97512 48.0833 9.97512H51.4054V8.22117H48.1862C45.4213 8.22117 44.0596 9.58284 44.0596 12.3481V18.332H46.2261V11.8323ZM55.6563 17.1558C55.9037 17.94 56.4199 18.332 57.2451 18.332H59.3084C60.1339 18.332 60.6704 17.94 60.9182 17.1558L63.6831 8.22117H61.4133L58.8961 16.6813H57.658L55.223 8.22117H52.9536L55.6563 17.1558ZM137.317 12.7607C137.317 9.70705 138.803 8.22117 141.857 8.22117H146.541V10.0784H141.651C140.268 10.0784 139.587 10.759 139.587 12.1417V14.5147C139.587 15.8974 140.268 16.578 141.651 16.578H146.19V5.43555H148.46V15.1338C148.46 17.3416 147.366 18.4352 145.158 18.4352H141.857C138.803 18.4352 137.317 16.9497 137.317 13.8956V12.7607H137.317ZM128.238 18.4355C125.473 18.4355 124.111 17.0739 124.111 14.3086V8.22217H126.381V14.6179C126.381 15.9383 127.02 16.5784 128.341 16.5784H132.158V8.22217H134.428V15.1338C134.428 17.3416 133.335 18.4352 131.127 18.4352H128.238V18.4355ZM118.953 14.515C118.953 15.8977 118.272 16.5784 116.889 16.5784H114C112.618 16.5784 111.937 15.8977 111.937 14.515V12.142C111.937 10.7594 112.618 10.0787 114 10.0787H116.889C118.272 10.0787 118.953 10.7594 118.953 12.142V14.515ZM116.682 18.4355C119.716 18.4355 121.222 16.929 121.222 13.896V12.7611C121.222 9.72803 119.716 8.2215 116.682 8.2215H114.206C111.173 8.2215 109.667 9.72803 109.667 12.7611V13.896C109.667 16.929 111.173 18.4355 114.206 18.4355H116.682ZM106.778 5.43555H104.508V18.332H106.778V5.43555ZM84.4412 9.97512C85.7616 9.97512 86.4013 10.6148 86.4013 11.9355V18.332H88.5679V12.3485C88.5679 9.58317 87.2059 8.2215 84.4409 8.2215H81.6759C79.4681 8.2215 78.3748 9.3151 78.3748 11.5229V18.3323H80.5414V9.97512H84.4412ZM75.4856 11.9355C75.4856 9.43865 74.2682 8.22117 71.7713 8.22117H66.2V9.97512H71.5651C72.7413 9.97512 73.3187 10.5529 73.3187 11.7291V16.6816H68.0779C67.4588 16.6816 67.1494 16.3719 67.1494 15.7528V14.6795C67.1494 14.0608 67.4588 13.7508 68.0779 13.7508H73.732V11.9968H68.2843C66.0765 11.9968 64.9829 13.0904 64.9829 15.2983C64.9829 17.4235 65.9939 18.4349 68.0572 18.4349H72.4939C74.4953 18.4349 75.4856 17.4445 75.4856 15.4428V11.9355Z"
+                    fill="black"
+                  ></path>
+                  <path
+                    d="M16.9663 5.80828L17.006 5.88837L23.6726 19.2213C23.8833 19.6583 24.0017 20.1486 24.0017 20.6667C24.0017 22.5078 22.5094 24 20.6683 24C19.4023 24 18.3016 23.2947 17.7373 22.2556L17.7301 22.2419C17.6994 22.1859 17.6716 22.1293 17.6449 22.0716L17.6442 22.0698L11.0544 8.89158L11.0511 8.88509C11.0324 8.85009 11.014 8.81437 10.997 8.77829L10.9905 8.76458C10.7838 8.33092 10.668 7.84601 10.668 7.33369C10.668 6.05542 11.387 4.94563 12.4423 4.38677C12.4871 4.36259 12.5322 4.33986 12.5776 4.3193L12.5823 4.31677C13.0127 4.11401 13.4937 4 14.0017 4C15.2933 3.99964 16.4132 4.73457 16.9663 5.80828Z"
+                    fill="#00BABA"
+                  ></path>
+                  <path d="M10.6667 20.6673C10.6667 22.5084 9.17408 24.0007 7.33333 24.0007C5.49223 24.0007 4 22.5084 4 20.6673C4 18.8262 5.49223 17.334 7.33333 17.334C9.17408 17.334 10.6667 18.8266 10.6667 20.6673Z" fill="#00BABA"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./assets/js/alpinejs.min.js"></script>
   </body>
 </html>
