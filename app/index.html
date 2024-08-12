@@ -355,6 +355,134 @@
         <img src="./images/d13d19a4-b9d7-4779-9fde5d-3d1ecd4e3e4b.jpg" alt="" />
       </div>
     </section>
+    <section class="relative py-24 lg:py-32 home__products bg-[#F3F8FC] overflow-hidden">
+      <div class="container px-8 xl:px-12 mx-auto">
+        <div class="flex flex-col">
+          <div class="font-semibold text-teal-600 text-sm xl:text-lg mb-3 xl:mb-6 z-10">خدمات رویال گروپ</div>
+          <div class="font-semibold text-gray-800 text-2xl xl:text-[38px] mb-14 xl:mb-16 z-10">پوشش کامل نیازهای شما برای آینده‌ای دیگر</div>
+        </div>
+        <div x-data="{ activeTab:  0 }">
+          <div x-tabs:list="" class="flex mb-6 lg:mb-24 overflow-x-auto">
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 0" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 0 }">سرور ابری</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 1" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 1 }">شبکه توزیع محتوا</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 2" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 2 }">فضای ابری</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 3" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 3 }">پلتفرم ویدیو</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 4" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 4 }">کانتینر ابری</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 5" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 5 }">دیتابیس ابری</h2>
+          </div>
+          <div class="mb-0 xl:mb-[9.5rem] ltr:xl:mb-[6.875rem]">
+            <div class="tab-panel" :class="{ 'active': activeTab === 0 }" x-show="activeTab === 0">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/cloud-computing.svg" alt="سریع و آسان سرور بسازید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">سریع و آسان سرور بسازید</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">با سرورهای ابری مقیاس‌پذیر و مقرون به صرفه‌ی ابر آروان در بهترین دیتاسنترهای ایران با منابع و سیستم‌عامل دلخواه به تعداد نامحدود سرور (ابرک) بسازید و به ‌شکل آنی منابع آن را افزایش دهید. شما می‌توانید به‌کمک فایروال و شبکه‌های خصوصی و عمومی سرور ابری آروان، سطوح دسترسی متفاوتی برای سرور خود در نظر بگیرید و با گرفتن اسنپ‌شات به وضعیت قبلی آن بازگردید.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cloud-server-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative left-0 xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/cloud-computing-desktop.svg" alt="سریع و آسان سرور بسازید"  />
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" :class="{ 'active': activeTab === 1 }" x-show="activeTab === 1">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/cdn.svg" alt="سریع‌تر و امن‌تر دیده شوید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">سریع‌تر و امن‌تر دیده شوید</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">شبکه توزیع محتوای ابر آروان شبکه‎‌ای امن و گسترده برای تحویل محتوای وب‌سایت شماست تا به کمک آن برای کاربران‌تان در سراسر جهان در دسترس باشید. با راه‌اندازی سریع، پایداری بالا و امکانات کامل این محصول مانند DNS و امنیت ابری، دیگر دغدغه‌ی تامین منابع زیرساختی و امنیت سرویس خود را نخواهید داشت.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/cdn" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cdn-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/cdn-desktop.svg" alt="سریع‌تر و امن‌تر دیده شوید" draggable="false" loading="eager" width="" height="" class="" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" :class="{ 'active': activeTab === 2 }" x-show="activeTab === 2">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/cloud-storage.svg" alt="داده‌هایتان را در محیطی امن ذخیره کنید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">داده‌هایتان را در محیطی امن ذخیره کنید</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">با فضای ابری آروان از نوع Object Storage، امکان ذخیره‌سازی هر نوع فایل یا داده‌ای را در محیط ابری، به‌شکل کاملن رمزنگاری شده خواهید داشت و از نقاط مختلف دنیا، به‌شکل پایدار به یک سامانه‌ی ذخیره‌سازی امن و مقیاس‌پذیر دسترسی پیدا می‌کنید؛ بدون آن‌که نگران زیرساخت یا از دست رفتن اطلاعات باشید.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/cloud-storage" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cloud-storage-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/cloud-storage-desktop.svg" alt="داده‌هایتان را در محیطی امن ذخیره کنید" draggable="false" loading="eager" width="" height="" class="" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" :class="{ 'active': activeTab === 3 }" x-show="activeTab === 3">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/video-platform.svg" alt="از بارگذاری تا پخش زنده محتوای ویدیویی" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">از بارگذاری تا پخش زنده محتوای ویدیویی</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">پلتفرم ویدیو ابر آروان بستری امن و در دسترس برای محتوای ویدیویی و صوتی شماست. با سرویس میزبانی ویدیو، فیلم‌ها و ویدیوهای خود را در فضای ابری نامحدود نگهداری کنید و آن را با کیفیت‌ها و فرمت‌های متفاوت به دست کاربران‌تان برسانید. هم‌چنین‌ با پخش زنده‌ ابر آروان می‌توانید استریم خود را با کم‌ترین تاخیر و بهترین کیفیت، بدون اختلال در معرض دید میلیون‌ها کاربر قرار دهید.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/video-platform" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_video-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/video-platform-desktop.svg" alt="از بارگذاری تا پخش زنده محتوای ویدیویی" draggable="false" loading="eager" width="" height="" class="" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" :class="{ 'active': activeTab === 4 }" x-show="activeTab === 4">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/paas.svg" alt="راه‌اندازی آسان و پایدار اپلیکیشن‌ها" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">راه‌اندازی آسان و پایدار اپلیکیشن‌ها</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">کانتینر ابری یا سکوی ابری آروان مبتنی بر Container و بر اساس استانداردهای Kubernetes است. شما می‌توانید تنها با یک دستور در CLI ایده‌های نرم‌افزاری خود را توسعه دهید و آن‌ها را به محصول تبدیل کنید. فرقی نمی‌کند نرم‌افزاری ساده یا پیچیده دیپلوی کنید؛ در کانتینر ابری (PaaS) آروان تمامی نیازمندی‌های زیرساختی شما به آسانی تامین می‌شود و با کنترل مداوم وضعیت زیرساخت، نرم‌افزارتان همیشه در دسترس خواهد بود.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/paas" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_container-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/paas-desktop.svg" alt="راه‌اندازی آسان و پایدار اپلیکیشن‌ها" draggable="false" loading="eager" width="" height="" class="" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel" :class="{ 'active': activeTab === 5 }" x-show="activeTab === 5">
+              <div class="flex flex-col lg:flex-row">
+                <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
+                  <div class="flex flex-col gap-6 mb-6 xl:mb-9">
+                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/database.svg" alt="خانه امن داده‌های شما" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">خانه امن داده‌های شما</div>
+                  </div>
+                  <div class="text-base text-gray-600 mb-10">دیتابیس ابری آروان زیرساختی امن، پایدار و مدیریت‌شده است و به شما کمک می‌کند تا به‌سادگی چند کلیک و در سریع‌ترین زمان تمام کارهای مرتبط با راه‌اندازی، مدیریت، پشتیبان‌گیری و به‌روزرسانی پایگاه داده کسب‌وکارتان را انجام دهید و بدون دغدغه‌های زیرساختی روی توسعه‌ی محصولات و خدمات آنلاین خود تمرکز کنید.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/databases" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_dbaas-more-btn">
+                    بیش‌تر بدانید
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                  </a>
+                </div>
+                <div class="home-products__tab-image w-full xl:w-2/4 relative xl:absolute rtl:left-0 ltr:right-0 z-10">
+                  <img src="https://www.arvancloud.ir/images/v6/home/products/dbaas-desktop.svg" alt="خانه امن داده‌های شما" draggable="false" loading="eager" width="" height="" class="" onerror="this.remove()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- footer -->
     <section class="relative py-24 lg:py-32 products-banner" id="seventh-section">
@@ -463,10 +591,8 @@
                 </div>
               </div>
             </div>
-
             <div>
               <div class="mb-6 text-xl font-semibold text-teal-600">ارتباطات</div>
-
               <div class="flex flex-col gap-5">
                 <div class="flex flex-col lg:flex-row lg:items-center gap-2">
                   <a class="footer-link" href="https://tech.arvancloud.ir"> آروان‌تک </a>
@@ -613,7 +739,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="hidden lg:block">
                 <div class="flex justify-center items-center rounded p-[10px] relative before:content-[''] before:absolute before:w-full before:h-full before:left-0 before:right-0 before:bg-gray-300 before:opacity-20 before:rounded">
                   <!-- <img referrerpolicy="origin" id="rgvjwlaojzpewlaoapfuwlao" style="cursor: pointer" onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=347454&amp;p=xlaoaodsjyoeaodsdshwaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt="logo-samandehi" src="/images/v6/footer/samandehi.webp" width="46" height="46" class="z-20" /> -->
