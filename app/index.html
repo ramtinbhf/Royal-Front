@@ -8,8 +8,8 @@
   </head>
   <body class="font-yekanbakh">
     <header class="w-full z-[1000] flex flex-col bg-white">
-      <nav class="flex flex-col space-y-3 h-36 xl:py-4">
-        <div class="xl:container xl:mx-auto px-8 py-4 xl:px-12 xl:py-0 flex items-center justify-stretch w-full" x-data="{ active: false }">
+      <nav class="flex flex-col space-y-3 pb-1 xl:shadow-sm z-50 py-4">
+        <div class="xl:container xl:mx-auto px-8 py-4 xl:px-12 xl:py-0 flex items-center justify-stretch w-full shadow-sm xl:shadow-none" x-data="{ active: false }">
           <div class="w-full flex items-center gap-2">
             <div>
               <!-- logo -->
@@ -341,15 +341,6 @@
         </div>
       </nav>
     </header>
-    <!-- info -->
-    <div class="w-full top-[7.5rem] -z-[1] bg-[#253343] text-white py-3 mb-[1px]">
-      <div class="container px-8 xl:px-12 mx-auto flex gap-x-3">
-        <div class="bg-[#BA9B6F] text-xs text-white px-3 py-1 rounded-[4px] hidden md:block cursor-default">جدید</div>
-        <a href="https://www.arvancloud.ir/fa/devops" class="text-white text-base"> خدمات رویال گروپ؛ تجربه‌ای راحت برای دریافت ویزای انگلیس ۱۰ ساله </a>
-        <img src="./images/arrow-left-w.svg" alt="arrow" width="24" height="24" />
-      </div>
-    </div>
-    <!-- slider -->
     <section>
       <div>
         <img src="./images/d13d19a4-b9d7-4779-9fde5d-3d1ecd4e3e4b.jpg" alt="" />
@@ -363,29 +354,29 @@
         </div>
         <div x-data="{ activeTab:  0 }">
           <div x-tabs:list="" class="flex mb-6 lg:mb-24 overflow-x-auto">
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 0" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 0 }">سرور ابری</h2>
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 1" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 1 }">شبکه توزیع محتوا</h2>
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 2" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 2 }">فضای ابری</h2>
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 3" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 3 }">پلتفرم ویدیو</h2>
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 4" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 4 }">کانتینر ابری</h2>
-            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 5" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 5 }">دیتابیس ابری</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 0" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 0 }">ویزای شینگن</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 1" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 1 }">اقامت اروپا</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 2" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 2 }">ویزای کاری اروپا</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 3" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 3 }">ویزای انگلیس</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 4" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 4 }">ویزای تحصیلی اروپا</h2>
+            <h2 class="tab-control relative justify-center flex items-center gap-2 text-base xl:text-xl px-6 py-3 min-w-fit text-gray-800 cursor-pointer focus-visible:outline-none transition-all" @click="activeTab = 5" :class="{ '!text-gray-800 bg-white rounded-lg shadow-[0px_8px_10px_0px_#0000000A] active': activeTab === 5 }">ویزای تحصیلی کانادا</h2>
           </div>
           <div class="mb-0 xl:mb-[9.5rem] ltr:xl:mb-[6.875rem]">
             <div class="tab-panel" :class="{ 'active': activeTab === 0 }" x-show="activeTab === 0">
               <div class="flex flex-col lg:flex-row">
                 <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
                   <div class="flex flex-col gap-6 mb-6 xl:mb-9">
-                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/cloud-computing.svg" alt="سریع و آسان سرور بسازید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
-                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">سریع و آسان سرور بسازید</div>
+                    <img src="./images/schengen.svg" alt="سریع و آسان سرور بسازید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4"> ویزای شینگن سریع و آسان</div>
                   </div>
-                  <div class="text-base text-gray-600 mb-10">با سرورهای ابری مقیاس‌پذیر و مقرون به صرفه‌ی ابر آروان در بهترین دیتاسنترهای ایران با منابع و سیستم‌عامل دلخواه به تعداد نامحدود سرور (ابرک) بسازید و به ‌شکل آنی منابع آن را افزایش دهید. شما می‌توانید به‌کمک فایروال و شبکه‌های خصوصی و عمومی سرور ابری آروان، سطوح دسترسی متفاوتی برای سرور خود در نظر بگیرید و با گرفتن اسنپ‌شات به وضعیت قبلی آن بازگردید.</div>
-                  <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cloud-server-more-btn">
+                  <div class="text-base text-gray-600 mb-10">آیا با تعریف کلی شنگن آشنایی دارید؟ آیا می‌دانید ویزای شینگن چیست و چه مزایای برای شما دارد؟ آیا تا به حال برای یکی از انواع مختلف ویزا شینگن درخواست داده‌اید و از جزئیات مدارک و شرایط اپلای ویزای شنگن باخبر هستید؟ اگر اطلاعات کمی در مورد این مجوز مهم و کاربردی قاره اروپا دارید و مایل به کسب اطلاعات بیشتر در این زمینه هستید، همراه ما باشید.</div>
+                  <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="section-btn text-lg font-semibold text-teal-600 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cloud-server-more-btn">
                     بیش‌تر بدانید
-                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
+                    <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500" />
                   </a>
                 </div>
                 <div class="home-products__tab-image w-full xl:w-2/4 relative left-0 xl:absolute rtl:left-0 ltr:right-0 z-10">
-                  <img src="https://www.arvancloud.ir/images/v6/home/products/cloud-computing-desktop.svg" alt="سریع و آسان سرور بسازید"  />
+                  <img src="./images/europe_france_map_3d_render copy.webp" alt="سریع و آسان سرور بسازید"  />
                 </div>
               </div>
             </div>
@@ -393,10 +384,10 @@
               <div class="flex flex-col lg:flex-row">
                 <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
                   <div class="flex flex-col gap-6 mb-6 xl:mb-9">
-                    <img src="https://www.arvancloud.ir/images/v6/home/products/icons/cdn.svg" alt="سریع‌تر و امن‌تر دیده شوید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
-                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">سریع‌تر و امن‌تر دیده شوید</div>
+                    <img src="./images/passport_2767389.png" alt="سریع‌تر و امن‌تر دیده شوید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">اقامت و تابعیت سریع‌تر و امن‌تر</div>
                   </div>
-                  <div class="text-base text-gray-600 mb-10">شبکه توزیع محتوای ابر آروان شبکه‎‌ای امن و گسترده برای تحویل محتوای وب‌سایت شماست تا به کمک آن برای کاربران‌تان در سراسر جهان در دسترس باشید. با راه‌اندازی سریع، پایداری بالا و امکانات کامل این محصول مانند DNS و امنیت ابری، دیگر دغدغه‌ی تامین منابع زیرساختی و امنیت سرویس خود را نخواهید داشت.</div>
+                  <div class="text-base text-gray-600 mb-10">برای مهاجرت و حضور در کشورهای مختلف ابتدا باید مجوز اقامتِ مورد نظر را دریافت کرد. ممکن است برخی از کشورها روش‌های مختلفی برای اعطای مجوز اقامت موقت و دائم به متقاضیان واجد شرایط ارائه دهند. پیشنهاد می‌کنیم برای آشنایی با روش‌های اقامتی و شرایط و مراحل هر یک، تا پایان این صفحه را مرور کنید و با کلیک روی گزینه موردنظر اطلاعات بیشتری برای مهاجرت به‌دست آورید.</div>
                   <a href="https://www.arvancloud.ir/fa/products/cdn" class="section-btn text-lg font-semibold text-green-800 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cdn-more-btn">
                     بیش‌تر بدانید
                     <img src="https://www.arvancloud.ir/images/v6/home/arrow-left.svg" alt="بیش‌تر بدانید" draggable="false" loading="lazy" width="24" height="24" class="transition-transform duration-500 ltr:rotate-180" onerror="this.remove()" />
