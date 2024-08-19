@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body class="font-yekanbakh">
+    <header class="w-full flex flex-col bg-white sticky top-0 z-40">
+        <nav class="flex flex-col space-y-3 pb-1 xl:shadow-sm z-50 py-4">
+            <div class="xl:container xl:mx-auto px-8 py-4 xl:px-12 xl:py-0 flex items-center justify-stretch w-full shadow-sm xl:shadow-none"
+                x-data="{ active: false }">
+                <div class="w-full flex items-center gap-2">
+                    <div>
+                        <!-- logo -->
+                        <a href="#">
+                            <img class="lg:w-44 w-36 h-auto" src="./images/logo.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-end gap-8" x-bind:class=" active && 'active z-40'">
+                    <div
+                        class="hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
+                        <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
+                        <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
+                    </div>
+                    <button title="menu-mobile" class="w-6 h-6 focus:outline-none xl:hidden"
+                        x-on:click=" active = !active ">
+                        <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out mb-3"
+                            :class="{'rotate-45 translate-y-0.5': active, 'mb-3': !active}"></span>
+                        <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out"
+                            :class="{'-rotate-45': active}"></span>
+                    </button>
+                </div>
+                <!-- panel -->
+                <div x-show="active" class="header-mobile-panel active" :class="{'active': active}">
+                    <div>
+                        <ul class="mt-2 header-mobile-submenu-active"
+                            :class="activePanel !== null && 'header-mobile-submenu-active' "
+                            x-data="{activePanel: null}">
+                            <li class="border-b border-gray-100 mx-4">
+                                <div x-data="{ expanded: false }" x-foo>
+                                    <div class="py-8 flex justify-between mx-4 font-semibold text-gray-900"
+                                        x-on:click="expanded = !expanded">
+                                        ویزا
+                                        <img alt="" src="./images/arrow-icon.svg" class="rtl:rotate-0 rotate-180" />
+                                    </div>
+
+                                    <div class="fixed top-0 right-0 z-[60] w-full bg-gray-100 pb-4 min-h-[100dvh]"
+                                        x-show="expanded">
+                                        <div
+                                            class="bg-white h-[85px] px-4 flex items-center gap-4 text-xl shadow-[0px_2px_15px_-3px_rgba(0,0,0,0.08)] relative">
+                                            <img alt="" class="rotate-0 rtl:rotate-180" src="./images/arrow-left.svg"
+                                                x-on:click="expanded = !expanded" />
+                                            ویزا
+                                        </div>
+
+                                        <div class="overflow-y-auto h-[calc(90dvh)]">
+                                            <div class="primary-menu">
+                                                <div
+                                                    class="text-teal-800 font-medium text-sm mb-9 relative before:content-[''] before:w-full before:h-[1px] before:bg-gray-100 before:absolute before:top-4 before:z-0">
+                                                    <span class="bg-white ltr:pr-3 rtl:pl-3 relative z-10"> ویزاهای ویژه
+                                                    </span>
+                                                </div>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/databases">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        ویزای انگلیس
+                                                        <span
+                                                            class="text-xs text-white bg-[#F43E88] rounded-[4px] px-2 xl:px-3 py-1 w-fit">
+                                                            جدید </span>
+                                                    </span>
+                                                    <p class="text-gray-600 text-xs font-normal">ویزای 10 ساله توریستی
+                                                        انگلیس</p>
+                                                </a>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/cloud-server">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        ویزای شینگن </span>
+
+                                                    <p class="text-gray-600 text-xs font-normal">دریافت ویزای ایتالیا،
+                                                        فرانسه، سوئیس، اسپانیا</p>
+                                                </a>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/cdn">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        شبکه توزیع محتوا </span>
+
+                                                    <p class="text-gray-600 text-xs font-normal">افزایش سرعت و امنیت
+                                                        وب&zwnj;سایت&zwnj;ها</p>
+                                                </a>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/video-platform">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        میزبانی ویدیو </span>
+
+                                                    <p class="text-gray-600 text-xs font-normal">میزبانی و پخش
+                                                        فایل&zwnj;های صوتی و ویدویی</p>
+                                                </a>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/cloud-storage">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        فضای ابری </span>
+
+                                                    <p class="text-gray-600 text-xs font-normal">ذخیره&zwnj;سازی
+                                                        فایل&zwnj;ها در فضای نامحدود ابری</p>
+                                                </a>
+                                                <a class="item gap-x-4"
+                                                    href="https://www.arvancloud.ir/fa/products/paas">
+                                                    <span
+                                                        class="text-gray-800 text-base font-extrabold mb-2 flex items-center gap-2">
+                                                        کانتینر ابری </span>
+
+                                                    <p class="text-gray-600 text-xs font-normal">استقرار سریع و آسان
+                                                        نرم&zwnj;افزارها بر بستر داکر و کوبرنتیز</p>
+                                                </a>
+                                            </div>
+
+                                            <div class="px-4 py-10">
+                                                <div
+                                                    class="text-teal-800 font-medium text-sm mb-3 relative before:content-[''] before:w-full before:h-[1px] before:bg-gray-100 before:absolute before:top-4 before:z-0 ltr:mr-6 rtl:ml-6">
+                                                    <span class="bg-gray-100 ltr:pr-3 rtl:pl-3 relative z-10">
+                                                        دسته&zwnj;بندی براساس عملکرد </span>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">عملکرد و پایداری
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn"
+                                                            class="text-gray-600 text-base font-medium"> شبکه توزیع
+                                                            محتوا </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/dns"
+                                                            class="text-gray-600 text-base font-medium"> DNS ابری </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/load-balancing"
+                                                            class="text-gray-600 text-base font-medium"> توزیع بار وب
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/migmig"
+                                                            class="text-gray-600 text-base font-medium"> شتاب&zwnj;دهی
+                                                            محتوا </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/smart-routing"
+                                                            class="text-gray-600 text-base font-medium"> مسیریابی هوشمند
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">رایانش ابری</div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cloud-server"
+                                                            class="text-gray-600 text-base font-medium"> سرور ابری </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/paas"
+                                                            class="text-gray-600 text-base font-medium"> کانتینر ابری
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">امنیت</div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/ddos"
+                                                            class="text-gray-600 text-base font-medium"> محافظت از DDoS
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/solutions/cloud-security"
+                                                            class="text-gray-600 text-base font-medium"> دیواره آتش وب
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/solutions/cloud-security"
+                                                            class="text-gray-600 text-base font-medium"> دیواره آتش </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/rate-limit"
+                                                            class="text-gray-600 text-base font-medium"> محدودیت درخواست
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/ssl"
+                                                            class="text-gray-600 text-base font-medium"> گواهینامه
+                                                            SSL/TLS </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/open-sesame"
+                                                            class="text-gray-600 text-base font-medium"> RKO </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">ذخیره&zwnj;سازی
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cloud-storage"
+                                                            class="text-gray-600 text-base font-medium"> آبجکت استورج
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cloud-server/block-storage"
+                                                            class="text-gray-600 text-base font-medium"> بلاک استورج
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">پلتفرم ویدیو</div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/video-platform"
+                                                            class="text-gray-600 text-base font-medium"> میزبانی ویدیو
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/video-platform/live-streaming"
+                                                            class="text-gray-600 text-base font-medium"> پخش زنده </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/video-platform"
+                                                            class="text-gray-600 text-base font-medium"> میزبانی صدا
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/video-platform/video-player"
+                                                            class="text-gray-600 text-base font-medium"> پلیر ویدیو </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/video-platform/ads"
+                                                            class="text-gray-600 text-base font-medium"> تبلیغات ویدیویی
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">شبکه</div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/l4-proxy"
+                                                            class="text-gray-600 text-base font-medium"> پروکسی لایه ۴
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cloud-server"
+                                                            class="text-gray-600 text-base font-medium"> دیواره آتش شبکه
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cloud-server"
+                                                            class="text-gray-600 text-base font-medium"> IP شناور </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">ابزار و سرویس ها
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/api"
+                                                            class="text-gray-600 text-base font-medium"> API </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/cli"
+                                                            class="text-gray-600 text-base font-medium"> CLI </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/sdk"
+                                                            class="text-gray-600 text-base font-medium"> SDK </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/cloud-shell"
+                                                            class="text-gray-600 text-base font-medium"> Shell ابری </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/terraform"
+                                                            class="text-gray-600 text-base font-medium"> ترافرم </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://lib.arvancloud.ir/"
+                                                            class="text-gray-600 text-base font-medium"> کتابخانه CDN
+                                                        </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/docker"
+                                                            class="text-gray-600 text-base font-medium"> مخزن
+                                                            ایمیج&zwnj;های داکر </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/dev/linux-repository"
+                                                            class="text-gray-600 text-base font-medium"> مخزن
+                                                            نرم&zwnj;افزاری لینوکس </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mx-4 py-7 border-b border-gray-100 last:border-none">
+                                                    <div class="text-gray-900 font-bold text-sm mb-4">بینش</div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://radar.arvancloud.ir"
+                                                            class="text-gray-600 text-base font-medium"> رادار </a>
+                                                    </div>
+                                                    <div class="mb-2 last:mb-0">
+                                                        <a href="https://www.arvancloud.ir/fa/products/cdn/log-forwarding"
+                                                            class="text-gray-600 text-base font-medium"> ارسال لاگ </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-4 w-full mb-6">
+                        <div class="sm:hidden flex items-center">
+                            <a class="font-bold text-[#BA9B6F] border-gray-300 w-1/2 rtl:ml-2 mr-2 rounded-lg h-10 text-center flex items-center justify-center border border-darkteal-500"
+                                href="https://accounts.arvancloud.ir/login"> ورود </a>
+                            <a class="bg-[#BA9B6F] rounded-lg text-white font-bold text-center flex items-center justify-center h-10 px-5 w-1/2"
+                                href="https://accounts.arvancloud.ir/register"> ثبت&zwnj;نام </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto hidden xl:block">
+                <ul class="flex items-center gap-9">
+                    <li class="relative" x-data="{ active : false }">
+                        <div class="header-menu-button" @click="active = !active" @click.away="active = false"
+                            :class="active ? 'active' : ''">
+                            <span>ویزا</span>
+                            <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <!-- sub menu -->
+                        <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                            <div class="header-dropdown text-gray-900 flex">
+                                <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">ویزاهای
+                                        ویژه<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                </div>
+                                <div class="w-2/3"></div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="relative" x-data="{ active : false }">
+                        <div class="header-menu-button" @click="active = !active" @click.away="active = false"
+                            :class="active ? 'active' : ''">
+                            <span>مهاجرت و اقامت</span>
+                            <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <!-- sub menu -->
+                        <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                            <div class="header-dropdown text-gray-900 flex">
+                                <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">اقامت
+                                        های ویژه <span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                </div>
+                                <div class="w-2/3"></div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="relative" x-data="{ active : false }">
+                        <div class="header-menu-button" @click="active = !active" @click.away="active = false"
+                            :class="active ? 'active' : ''">
+                            <span>پذیرش تحصیلی</span>
+                            <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <!-- sub menu -->
+                        <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                            <div class="header-dropdown text-gray-900 flex">
+                                <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">ویزاهای
+                                        تحصیلی ویژه<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                </div>
+                                <div class="w-2/3"></div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="relative" x-data="{ active : false }">
+                        <div class="header-menu-button" @click="active = !active" @click.away="active = false"
+                            :class="active ? 'active' : ''">
+                            <span>فرم ها و مدارک ها</span>
+                            <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                                <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <!-- sub menu -->
+                        <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                            <div class="header-dropdown text-gray-900 flex">
+                                <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">مستندات
+                                        فنی<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                    <a href="#" class="flex p-2 rounded-lg">
+                                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span
+                                                class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله
+                                                توریستی</span></div>
+                                    </a>
+                                </div>
+                                <div class="w-2/3"></div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li class="relative">
+                        <div class="header-menu-button">
+                            <span>تماس با ما</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="hidden md:block">
+        <div class="w-full static top-[7.5rem] -z-[1] bg-gray-800 text-white py-3 mb-[1px]">
+            <div class="px-8 xl:container mx-auto">
+                <div class="flex gap-x-3">
+                    <div class="bg-[#ff0066] text-xs text-white px-3 py-1 rounded-[4px] hidden md:block cursor-default">
+                        تا ۵۰ درصد تخفیف
+                    </div>
+                    <a href="#" class="text-white text-base">
+                        سرور اختصاصی ابری آروان‌کلاد با تخفیف ویژه!
+                    </a>
+                    <img src="./images/arrow-left-w.svg" alt="arrow" width="24" height="24">
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="flex-1">
+        <section class="relative py-24 lg:py-32 bg-gray-50" id="">
+            <div class=" container px-8 xl:px-12 mx-auto">
+                <div class="flex flex-col">
+                    <div class="font-medium text-teal-500 text-base mb-5 z-10">
+                        تماس با ما
+                    </div>
+
+                    <div class="font-semibold text-gray-900 text-3xl mb-8 z-10">
+                        ارتباط پیوسته با ابر آروان، در هر ساعت از شبانه‌روز
+                    </div>
+
+                    <p class="font-normal text-lg text-gray-600 mb-16 z-10">
+                        ابر آروان به شکل ۲۴ ساعته در ۷ روز هفته، پاسخ‌گوی نیازها و پرسش‌های مشتریان و مخاطبان خود است.
+                        شما می‌توانید درخواست‌ها، گزارش‌ها و پیام‌هایتان را از طریق راه‌های ارتباطی درج شده در این صفحه،
+                        به دست ما برسانید.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white border-gray-50 rounded-xl shadow p-8 flex flex-col justify-between z-10">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-4 mb-8">
+                                <img src="https://www.arvancloud.ir/images/v6/svg/chat.svg" alt="" draggable="false"
+                                    loading="lazy" width="" height="" class="" onerror="this.remove()">
+                                <span class="font-semibold text-base text-start text-gray-800">
+                                    تماس تلفنی
+                                </span>
+                            </div>
+
+                            <div class="font-medium text-gray-800 text-start mb-2">
+                                پاسخ‌گویی ۲۴ ساعته در ۷ روز هفته با مرکز تماس
+                            </div>
+
+                            <div class="flex gap-4">
+                                <a href="tel:+982191019999" class="font-semibold text-base text-teal-600">
+                                    ۰۲۱-۹۱۰۱۹۹۹۹
+                                </a>
+                                <a href="tel:+982191039999" class="font-semibold text-base text-teal-600">
+                                    ۰۲۱-۹۱۰۳۹۹۹۹
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="tel:+982191019999" target="_blank"
+                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center text-white text-sm flex gap-2 items-center">
+                                ارتباط با پشتیبانی
+                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                    draggable="false" loading="lazy" width="" height="" class="ltr:rotate-180"
+                                    onerror="this.remove()">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white border-gray-50 rounded-xl shadow p-8 flex flex-col justify-between z-10">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-4 mb-8">
+                                <img src="https://www.arvancloud.ir/images/v6/svg/writing.svg" alt="" draggable="false"
+                                    loading="lazy" width="" height="" class="" onerror="this.remove()">
+                                <span class="font-semibold text-base text-start text-gray-800">
+                                    گفت‌گو با کارشناسان
+                                </span>
+                            </div>
+
+                            <div class="font-medium text-gray-800 text-start mb-2">
+                                گفت‌وگوی آنلاین با کارشناسان مرکز تماس از راه چت
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div
+                                class="bg-gray-200 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center text-white text-sm flex gap-2 items-center cursor-not-allowed">
+                                ارسال پیام
+                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                    draggable="false" loading="lazy" width="" height="" class="ltr:rotate-180"
+                                    onerror="this.remove()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border-gray-50 rounded-xl shadow p-8 flex flex-col justify-between z-10">
+                        <div class="mb-6">
+                            <div class="flex items-center gap-4 mb-8">
+                                <img src="https://www.arvancloud.ir/images/v6/svg/send-email.svg" alt=""
+                                    draggable="false" loading="lazy" width="" height="" class=""
+                                    onerror="this.remove()">
+                                <span class="font-semibold text-base text-start text-gray-800">
+                                    ارسال پیام
+                                </span>
+                            </div>
+
+                            <div class="font-medium text-gray-800 text-start mb-2">
+                                دریافت پیام‌های مکتوب شما از طریق ایمیل
+                            </div>
+
+                            <div class="flex gap-4">
+                                <a href="mailto:callcenter@arvancloud.ir" class="font-semibold text-base text-teal-600">
+                                    callcenter@arvancloud.ir
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="mailto:callcenter@arvancloud.ir" target="_blank"
+                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center text-white text-sm flex gap-2 items-center">
+                                ارسال ایمیل
+                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                    draggable="false" loading="lazy" width="" height="" class="ltr:rotate-180"
+                                    onerror="this.remove()">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative py-24 lg:py-32 bg-white" id="">
+
+
+            <div class=" container px-8 xl:px-12 mx-auto">
+                <div class="flex flex-col">
+                    <div class="font-semibold text-teal-600 text-sm xl:text-lg mb-6 z-10">
+                        ارتباط مستقیم
+                    </div>
+
+                    <div class="font-semibold text-gray-800 text-2xl xl:text-3xl mb-14 z-10">
+                        ارسال پیام‌ها، درخواست‌ها و گزارش‌های مرتبط با ابر آروان
+                    </div>
+                </div>
+                <div x-data="{ activeTab:  0 }">
+                    <div class="flex mb-6 lg:mb-14 overflow-x-auto" x-tabs:list="">
+                        <div class="relative pb-2 justify-center transition-all flex items-center gap-2 text-xl px-6 py-3 min-w-fit text-gray-700 cursor-pointer"
+                            @click="activeTab = 0"
+                            :class="{'!text-white bg-teal-500 rounded-xl active': activeTab === 0}" href="#"
+                            tabindex="-1">
+                            مرکز تماس
+                        </div>
+                        <div class="relative pb-2 justify-center transition-all flex items-center gap-2 text-xl px-6 py-3 min-w-fit text-gray-700 cursor-pointer"
+                            @click="activeTab = 1"
+                            :class="{'!text-white bg-teal-500 rounded-xl active': activeTab === 1}" href="#"
+                            tabindex="-1">
+                            فروش سازمانی
+                        </div>
+                        <div class="relative pb-2 justify-center transition-all flex items-center gap-2 text-xl px-6 py-3 min-w-fit text-gray-700 cursor-pointer"
+                            @click="activeTab = 2"
+                            :class="{'!text-white bg-teal-500 rounded-xl active': activeTab === 2}" href="#"
+                            tabindex="-1">
+                            همکاری تجاری
+                        </div>
+                        <div class="relative pb-2 justify-center transition-all flex items-center gap-2 text-xl px-6 py-3 min-w-fit text-gray-700 cursor-pointer"
+                            @click="activeTab = 3"
+                            :class="{'!text-white bg-teal-500 rounded-xl active': activeTab === 3}" href="#"
+                            tabindex="-1">
+                            ثبت بازخورد
+                        </div>
+                        <div class="relative pb-2 justify-center transition-all flex items-center gap-2 text-xl px-6 py-3 min-w-fit text-gray-700 cursor-pointer !text-white bg-teal-500 rounded-xl"
+                            @click="activeTab = 4"
+                            :class="{'!text-white bg-teal-500 rounded-xl active': activeTab === 4}" href="#"
+                            tabindex="0">
+                            گزارش باگ
+                        </div>
+                    </div>
+
+                    <div x-tabs:panels="">
+                        <div :class="{ 'active': activeTab === 0 }" x-show="activeTab === 0"
+                            class="grid grid-cols-4  gap-8 xl:gap-4" tabindex="-1">
+                            <div class="col-span-4 xl:col-span-1 z-10">
+                                <div class="flex flex-col gap-4 mb-6">
+                                    <img src="https://www.arvancloud.ir/images/v6/contact/call-center.svg"
+                                        alt="مرکز تماس" draggable="false" loading="lazy" width="40" height="40"
+                                        class="mx-5" onerror="this.remove()">
+                                    <span
+                                        class="font-semibold text-xl text-gray-800 rtl:border-r-2 ltr:border-l-2 border-teal-600 px-5">
+                                        مرکز تماس
+                                    </span>
+                                </div>
+
+                                <div class="font-medium text-sm text-gray-500 px-5">
+                                    مرکز تماس ابر آروان به شکل ۲۴ ساعته و در ۷ روز هفته، به پرسش‌های مشتریان ابر آروان
+                                    در زمینه‌های فنی و مالی پاسخ می‌دهد. همچنین برای ارتباط با این بخش می‌توانید از طریق
+                                    پنل کاربری خود، تیکت ثبت کنید.
+                                </div>
+                            </div>
+
+                            <div class="col-span-4 xl:col-span-3 bg-white border border-gray-50 shadow-3xl rounded-2xl md:p-12 px-6 py-12 z-10"
+                                x-data="contactForm">
+                                <form class="grid grid-cols-2 gap-6" x-data="validator"
+                                    @submit.prevent="callCenter($el)" id="callcenter">
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactFullName" class="contact-form-label requerd mb-2">
+                                            نام و نام خانوادگی
+                                        </label>
+
+                                        <input type="text" name="name" id="contactFullName"
+                                            class="contact-form-control outline-none mb-2"
+                                            placeholder="نام و نام خانوادگی" x-validate.bluronly="()=> checkName($el)"
+                                            required="" data-error-msg="نام و نام خانوادگی نامعتبر است"
+                                            aria-errormessage="error-msg-contactFullName">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactEmail" class="contact-form-label requerd mb-2">
+                                            ایمیل
+                                        </label>
+
+                                        <input type="text" name="email" id="contactEmail"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="email@example.com"
+                                            x-validate.bluronly="()=> checkEmail($el)" required=""
+                                            data-error-msg="ایمیل نامعتبر است"
+                                            aria-errormessage="error-msg-contactEmail">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactMobile" class="contact-form-label requerd mb-2">
+                                            شماره همراه
+                                        </label>
+
+                                        <input type="phone" name="mobile" id="contactMobile"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="09100100000"
+                                            x-validate.bluronly="()=> checkPhoneNumber($el)" required=""
+                                            data-error-msg="شماره نامعتبر است"
+                                            aria-errormessage="error-msg-contactMobile">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            موضوع
+                                        </label>
+
+                                        <input type="text" id="contactTopic" name="subject"
+                                            class="contact-form-control outline-none mb-2" placeholder="موضوع"
+                                            x-validate.bluronly="()=> checksubject($el, 'موضوع')" required=""
+                                            data-error-msg="موضوع نامعتبر است"
+                                            aria-errormessage="error-msg-contactTopic">
+                                    </div>
+
+                                    <div class="col-span-2" x-data="{ count: 0 }"
+                                        x-init="count = $refs.countme.value.length">
+                                        <div class="mt-2 flex justify-between">
+                                            <label for="contactMessage" class="contact-form-label requerd block mb-2">
+                                                پیام
+                                            </label>
+                                            <div>
+                                                <span
+                                                    x-html="bodyCharecterCounter($refs.countme.maxLength - count)">۲۸۰</span>
+                                                کارکتر
+                                            </div>
+                                        </div>
+
+                                        <textarea cols="30" rows="5" maxlength="280" id="contactMessage" name="body"
+                                            class="contact-form-control outline-none mb-2" placeholder="پیام"
+                                            x-ref="countme" x-on:keyup="count = $refs.countme.value.length"
+                                            x-validate.bluronlye="()=> checkBody($el)" required=""
+                                            data-error-msg="متن وارد شده باید بین ۵ تا ۲۸۰ کارکتر باشد"
+                                            aria-errormessage="error-msg-contactMessage"></textarea>
+                                    </div>
+
+                                    <div class="col-span-2 items-center">
+                                        <div class="flex justify-between flex-col sm:flex-row gap-2 items-center">
+                                            <span x-html="formMsg" class="formMsg text-center sm:text-start">* پر کردن
+                                                قسمت‌های ستاره‌دار ضروری است.</span>
+                                            <button
+                                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center gap-2 text-white text-sm min-w-fit disabled:bg-gray-200 disabled:cursor-not-allowed">
+                                                ارسال درخواست
+                                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                                    draggable="false" loading="lazy" width="" height=""
+                                                    class="ltr:rotate-180" onerror="this.remove()">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div :class="{ 'active': activeTab === 1 }" x-show="activeTab === 1"
+                            class="grid grid-cols-4  gap-8 xl:gap-4" tabindex="-1">
+                            <div class="col-span-4 xl:col-span-1 z-10">
+                                <div class="flex flex-col gap-4 mb-6">
+                                    <img src="https://www.arvancloud.ir/images/v6/contact/enterprise-sales.svg"
+                                        alt="فروش سازمانی" draggable="false" loading="lazy" width="40" height="40"
+                                        class="mx-5" onerror="this.remove()">
+                                    <span
+                                        class="font-semibold text-xl text-gray-800 rtl:border-r-2 ltr:border-l-2 border-teal-600 px-5">
+                                        فروش سازمانی
+                                    </span>
+                                </div>
+
+                                <div class="font-medium text-sm text-gray-500 px-5">
+                                    اگر صاحب سازمان یا کسب‌وکاری بزرگ هستید و برای تامین نیازهای زیرساختی خود، نیاز به
+                                    مشاوره و راهنمایی دارید، از طریق پر کردن فرم زیر با همکاران ما در بخش فروش در ارتباط
+                                    باشید.
+                                </div>
+                            </div>
+
+                            <div class="col-span-4 xl:col-span-3 bg-white border border-gray-50 shadow-3xl rounded-2xl md:p-12 px-6 py-12 z-10"
+                                x-data="contactForm">
+                                <form class="grid grid-cols-2 gap-6" x-data="validator"
+                                    @submit.prevent="callCenter($el)" id="enterprise-sales">
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactFullName" class="contact-form-label requerd mb-2">
+                                            نام و نام خانوادگی
+                                        </label>
+
+                                        <input type="text" name="sales-name" id="contactFullName"
+                                            class="contact-form-control outline-none mb-2"
+                                            placeholder="نام و نام خانوادگی" x-validate.bluronly="()=> checkName($el)"
+                                            required="" data-error-msg="نام و نام خانوادگی نامعتبر است"
+                                            aria-errormessage="error-msg-contactFullName">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactEmail" class="contact-form-label requerd mb-2">
+                                            ایمیل
+                                        </label>
+
+                                        <input type="text" name="sales-email" id="contactEmail"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="email@example.com"
+                                            x-validate.bluronly="()=> checkEmail($el)" required=""
+                                            data-error-msg="ایمیل نامعتبر است"
+                                            aria-errormessage="error-msg-contactEmail">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactMobile" class="contact-form-label requerd mb-2">
+                                            شماره همراه
+                                        </label>
+
+                                        <input type="phone" name="sales-mobile" id="contactMobile"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="09100100000"
+                                            x-validate.bluronly="()=> checkPhoneNumber($el)" required=""
+                                            data-error-msg="شماره نامعتبر است"
+                                            aria-errormessage="error-msg-contactMobile">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            نام شرکت
+                                        </label>
+
+                                        <input type="text" id="contactTopic" name="sales-cname"
+                                            class="contact-form-control outline-none mb-2" placeholder="نام شرکت "
+                                            x-validate.bluronly="()=> checksubject($el, 'نام شرکت')" required=""
+                                            data-error-msg="نام شرکت نامعتبر است"
+                                            aria-errormessage="error-msg-contactTopic">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            اندازه شرکت
+                                        </label>
+                                        <div x-data="{ active: false, value: 'انتخاب کنید', chooseItem(item) { this.value = item; this.active = false; } }"
+                                            class="relative" @click.away="active = false">
+
+                                            <div class="dropdown-head border border-gray-100 rounded-lg px-4 py-3 text-gray-900 w-full text-start flex justify-between items-center cursor-pointer"
+                                                @click="active = !active">
+                                                <span x-text="value"></span>
+                                                <div :class="{ 'rotate-180': active }">
+                                                    <img src="https://www.arvancloud.ir/images/v6/svg/dropdwon-arrow.svg"
+                                                        alt="Arrow" draggable="false" loading="lazy"
+                                                        onerror="this.remove()">
+                                                </div>
+                                            </div>
+
+                                            <ul class="contact-form-dropdonw-menu" x-show="active"
+                                                x-transition.origin.top.right="">
+                                                <div class="dropdown-menu-item-wrap">
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('انتخاب کنید')">
+                                                        انتخاب کنید
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('تا ۱۰ نفر')">
+                                                        تا ۱۰ نفر
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('۱۰ تا ۵۰ نفر')">
+                                                        ۱۰ تا ۵۰ نفر
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('۵۰ تا ۱۵۰ نفر')">
+                                                        ۵۰ تا ۱۵۰ نفر
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('۱۵۰ تا ۵۰۰ نفر')">
+                                                        ۱۵۰ تا ۵۰۰ نفر
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem('بیشتر از ۵۰۰ نفر')">
+                                                        بالای ۵۰۰ نفر
+                                                    </li>
+                                                </div>
+                                            </ul>
+
+                                            <input type="hidden" name="sales-csize" :value="value" required>
+                                            <span class="error-msg mt-2" id="error-msg-sales-csize"></span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            حوزه فعالیت
+                                        </label>
+
+                                        <div x-data="dropdown" class="relative" @click="open = !open"
+                                            @click.away="open = false">
+                                            <div
+                                                class="dropdown-head border border-gray-100 rounded-lg px-4 py-3 text-gray-900 w-full text-start flex justify-between items-center cursor-pointer">
+                                                <span x-text="value">انتخاب کنید</span>
+                                                <div :class="{ 'rotate-180': open }">
+                                                    <img src="https://www.arvancloud.ir/images/v6/svg/dropdwon-arrow.svg"
+                                                        alt="Arrow" draggable="false" loading="lazy" width="" height=""
+                                                        class="" onerror="this.remove()">
+                                                </div>
+                                            </div>
+
+                                            <ul class="contact-form-dropdonw-menu" x-show="open"
+                                                x-transition.origin.top.right="">
+                                                <div class="dorpdown-menu-item-wrap">
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        انتخاب کنید
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        سازمانی
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        دولتی
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        تولیدی
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        صنعتی
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        فناوری اطلاعات
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        تجارت الکترونیک
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        بانک
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        موسسات مالی و اعتباری
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        بیمه
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        خبری
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        محتوایی
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        سایر
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                            <input type="hidden" name="sales-cactivity" :value="value" required=""
+                                                value="انتخاب کنید">
+                                            <span class="error-msg mt-2" id="error-msg-sales-cactivity"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-span-2">
+                                        <label for="contactTopic" class="contact-form-label mb-2">
+                                            موضوع
+                                        </label>
+
+                                        <input type="text" id="contactTopic" name="sales-subject"
+                                            class="contact-form-control outline-none mb-2" placeholder="موضوع"
+                                            x-validate.bluronly="()=> checksubject($el, 'موضوع')"
+                                            data-error-msg="موضوع نامعتبر است"
+                                            aria-errormessage="error-msg-contactTopic">
+                                    </div>
+
+                                    <div class="col-span-2" x-data="{ count: 0 }"
+                                        x-init="count = $refs.countme.value.length">
+                                        <div class="mt-2 flex justify-between">
+                                            <label for="contactMessage" class="contact-form-label requerd block mb-2">
+                                                پیام
+                                            </label>
+                                            <div>
+                                                <span
+                                                    x-html="bodyCharecterCounter($refs.countme.maxLength - count)">۲۸۰</span>
+                                                کارکتر
+                                            </div>
+                                        </div>
+
+                                        <textarea cols="30" rows="5" maxlength="280" id="contactMessage"
+                                            name="sales-body" class="contact-form-control outline-none mb-2"
+                                            placeholder="متن پیام" x-ref="countme"
+                                            x-on:keyup="count = $refs.countme.value.length"
+                                            x-validate.bluronlye="()=> checkBody($el)" required=""
+                                            data-error-msg="متن وارد شده باید بین ۵ تا ۲۸۰ کارکتر باشد"
+                                            aria-errormessage="error-msg-contactMessage"></textarea>
+                                    </div>
+
+                                    <div class="col-span-2 items-center">
+                                        <div class="flex justify-between flex-col sm:flex-row gap-2 items-center">
+                                            <span x-html="formMsg" class="formMsg text-center sm:text-start">* پر کردن
+                                                قسمت‌های ستاره‌دار ضروری است.</span>
+                                            <button
+                                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center gap-2 text-white text-sm min-w-fit disabled:bg-gray-200 disabled:cursor-not-allowed">
+                                                ارسال درخواست
+                                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                                    draggable="false" loading="lazy" width="" height=""
+                                                    class="ltr:rotate-180" onerror="this.remove()">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div :class="{ 'active': activeTab === 2 }" x-show="activeTab === 2"
+                            class="grid grid-cols-4  gap-8 xl:gap-4" tabindex="-1">
+                            <div class="col-span-4 xl:col-span-1 z-10">
+                                <div class="flex flex-col gap-4 mb-6">
+                                    <img src="https://www.arvancloud.ir/images/v6/contact/business-partnership.svg"
+                                        alt="همکاری تجاری" draggable="false" loading="lazy" width="40" height="40"
+                                        class="mx-5" onerror="this.remove()">
+                                    <span
+                                        class="font-semibold text-xl text-gray-800 rtl:border-r-2 ltr:border-l-2 border-teal-600 px-5">
+                                        همکاری تجاری
+                                    </span>
+                                </div>
+
+                                <div class="font-medium text-sm text-gray-500 px-5">
+                                    کسب‌وکارهایی که در زمینه‌ی زیرساخت، تولید یا راه‌اندازی راهکارهای ابری فعالیت میکنند
+                                    و علاقه‌مندند تا به جمع شرکای ابری آروان بپیوندند، میتوانند از طریق پر کردن فرم زیر
+                                    با همکاران ما در این بخش در ارتباط باشند.
+                                </div>
+                            </div>
+
+                            <div class="col-span-4 xl:col-span-3 bg-white border border-gray-50 shadow-3xl rounded-2xl md:p-12 px-6 py-12 z-10"
+                                x-data="contactForm">
+                                <form class="grid grid-cols-2 gap-6" x-data="validator"
+                                    @submit.prevent="callCenter($el)" id="business-partnership">
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactFullName" class="contact-form-label requerd mb-2">
+                                            نام و نام خانوادگی
+                                        </label>
+
+                                        <input type="text" name="business-name" id="contactFullName"
+                                            class="contact-form-control outline-none mb-2"
+                                            placeholder="نام و نام خانوادگی" x-validate.bluronly="()=> checkName($el)"
+                                            required="" data-error-msg="نام و نام خانوادگی نامعتبر است"
+                                            aria-errormessage="error-msg-contactFullName"><span class="error-msg"
+                                            id="error-msg-contactFullName" hidden="">نام و نام خانوادگی نامعتبر
+                                            است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactEmail" class="contact-form-label requerd mb-2">
+                                            ایمیل
+                                        </label>
+
+                                        <input type="text" name="business-email" id="contactEmail"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="email@example.com"
+                                            x-validate.bluronly="()=> checkEmail($el)" required=""
+                                            data-error-msg="ایمیل نامعتبر است"
+                                            aria-errormessage="error-msg-contactEmail"><span class="error-msg"
+                                            id="error-msg-contactEmail" hidden="">ایمیل نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactMobile" class="contact-form-label requerd mb-2">
+                                            شماره همراه
+                                        </label>
+
+                                        <input type="phone" name="business-mobile" id="contactMobile"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="09100100000"
+                                            x-validate.bluronly="()=> checkPhoneNumber($el)" required=""
+                                            data-error-msg="شماره نامعتبر است"
+                                            aria-errormessage="error-msg-contactMobile">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            نام شرکت
+                                        </label>
+
+                                        <input type="text" id="contactTopic" name="business-cname"
+                                            class="contact-form-control outline-none mb-2" placeholder="نام شرکت "
+                                            x-validate.bluronly="()=> checksubject($el, 'نام شرکت')" required=""
+                                            data-error-msg="نام شرکت نامعتبر است"
+                                            aria-errormessage="error-msg-contactTopic"><span class="error-msg"
+                                            id="error-msg-contactTopic" hidden="">موضوع نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            نوع مشارکت
+                                        </label>
+
+                                        <div x-data="dropdown" class="relative" @click="open = !open"
+                                            @click.away="open = false">
+                                            <div
+                                                class="dropdown-head border border-gray-100 rounded-lg px-4 py-3 text-gray-900 w-full text-start flex justify-between items-center cursor-pointer">
+                                                <span x-text="value">انتخاب کنید</span>
+                                                <div :class="{ 'rotate-180': open }">
+                                                    <img src="https://www.arvancloud.ir/images/v6/svg/dropdwon-arrow.svg"
+                                                        alt="Arrow" draggable="false" loading="lazy" width="" height=""
+                                                        class="" onerror="this.remove()">
+                                                </div>
+                                            </div>
+
+                                            <ul class="contact-form-dropdonw-menu" x-show="open"
+                                                x-transition.origin.top.right="">
+                                                <div class="dorpdown-menu-item-wrap">
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        انتخاب کنید
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        نرم‌افزار
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        سرویس
+                                                    </li>
+                                                    <li class="p-3 hover:bg-teal-100 w-full rounded-lg cursor-pointer"
+                                                        @click="chooseItem($el)">
+                                                        زیرساخت
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                            <input type="hidden" name="business-ctype" :value="value" required=""
+                                                value="انتخاب کنید">
+                                            <span class="error-msg mt-2" id="error-msg-business-ctype"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label mb-2">
+                                            موضوع
+                                        </label>
+
+                                        <input type="text" id="contactTopic" name="business-subject"
+                                            class="contact-form-control outline-none mb-2" placeholder="موضوع"
+                                            x-validate.bluronly="()=> checksubject($el, 'موضوع')"
+                                            data-error-msg="موضوع نامعتبر است"
+                                            aria-errormessage="error-msg-contactTopic">
+                                    </div>
+
+                                    <div class="col-span-2" x-data="{ count: 0 }"
+                                        x-init="count = $refs.countme.value.length">
+                                        <div class="mt-2 flex justify-between">
+                                            <label for="contactMessage" class="contact-form-label requerd block mb-2">
+                                                جزییات بازخورد
+                                            </label>
+                                            <div>
+                                                <span
+                                                    x-html="bodyCharecterCounter($refs.countme.maxLength - count)">۲۸۰</span>
+                                                کارکتر
+                                            </div>
+                                        </div>
+
+                                        <textarea cols="30" rows="5" maxlength="280" id="contactMessage"
+                                            name="business-body" class="contact-form-control outline-none mb-2"
+                                            placeholder="جزییات باگ" x-ref="countme"
+                                            x-on:keyup="count = $refs.countme.value.length"
+                                            x-validate.bluronlye="()=> checkBody($el)" required=""
+                                            data-error-msg="متن وارد شده باید بین ۵ تا ۲۸۰ کارکتر باشد"
+                                            aria-errormessage="error-msg-contactMessage"></textarea>
+                                    </div>
+
+                                    <div class="col-span-2 items-center">
+                                        <div class="flex justify-between flex-col sm:flex-row gap-2 items-center">
+                                            <span x-html="formMsg" class="formMsg text-center sm:text-start">* پر کردن
+                                                قسمت‌های ستاره‌دار ضروری است.</span>
+                                            <button
+                                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center gap-2 text-white text-sm min-w-fit disabled:bg-gray-200 disabled:cursor-not-allowed">
+                                                ارسال درخواست
+                                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                                    draggable="false" loading="lazy" width="" height=""
+                                                    class="ltr:rotate-180" onerror="this.remove()">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div :class="{ 'active': activeTab === 3 }" x-show="activeTab === 3"
+                            class="grid grid-cols-4  gap-8 xl:gap-4" tabindex="-1">
+                            <div class="col-span-4 xl:col-span-1 z-10">
+                                <div class="flex flex-col gap-4 mb-6">
+                                    <img src="https://www.arvancloud.ir/images/v6/contact/feedback.svg"
+                                        alt="ثبت بازخورد" draggable="false" loading="lazy" width="40" height="40"
+                                        class="mx-5" onerror="this.remove()">
+                                    <span
+                                        class="font-semibold text-xl text-gray-800 rtl:border-r-2 ltr:border-l-2 border-teal-600 px-5">
+                                        ثبت بازخورد
+                                    </span>
+                                </div>
+
+                                <div class="font-medium text-sm text-gray-500 px-5">
+                                    اگر نسبت به خدمات، محصولات یا پشتیبانی ابر آروان پیشنهاد، انتقاد، نظر یا بازخوردی
+                                    دارید میتوانید دیدگاههای خود را برای ما ارسال کنید تا همکارانمان در بخش صدای
+                                    مشتریان، با شما تماس بگیرند.
+                                </div>
+                            </div>
+
+                            <div class="col-span-4 xl:col-span-3 bg-white border border-gray-50 shadow-3xl rounded-2xl md:p-12 px-6 py-12 z-10"
+                                x-data="contactForm">
+                                <form class="grid grid-cols-2 gap-6" x-data="validator"
+                                    @submit.prevent="callCenter($el)" id="feedback">
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactFullName" class="contact-form-label requerd mb-2">
+                                            نام و نام خانوادگی
+                                        </label>
+
+                                        <input type="text" name="feedback-name" id="bugReportName"
+                                            class="contact-form-control outline-none mb-2"
+                                            placeholder="نام و نام خانوادگی" x-validate.bluronly="()=> checkName($el)"
+                                            required="" data-error-msg="نام و نام خانوادگی نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportName">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactEmail" class="contact-form-label requerd mb-2">
+                                            ایمیل
+                                        </label>
+
+                                        <input type="text" name="feedback-email" id="bugReportEmail"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="email@example.com"
+                                            x-validate.bluronly="()=> checkEmail($el)" required=""
+                                            data-error-msg="ایمیل نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportEmail">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactMobile" class="contact-form-label requerd mb-2">
+                                            شماره همراه
+                                        </label>
+
+                                        <input type="phone" name="feedback-mobile" id="contactMobile"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="09100100000"
+                                            x-validate.bluronly="()=> checkPhoneNumber($el)" required=""
+                                            data-error-msg="شماره نامعتبر است"
+                                            aria-errormessage="error-msg-contactMobile">
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            موضوع
+                                        </label>
+
+                                        <input type="text" id="bugReportSubject" name="feedback-subject"
+                                            class="contact-form-control outline-none mb-2" placeholder="موضوع"
+                                            x-validate.bluronly="()=> checksubject($el, 'موضوع')" required=""
+                                            data-error-msg="موضوع نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportSubject">
+                                    </div>
+
+                                    <div class="col-span-2" x-data="{ count: 0 }"
+                                        x-init="count = $refs.countme.value.length">
+                                        <div class="mt-2 flex justify-between">
+                                            <label for="contactMessage" class="contact-form-label requerd block mb-2">
+                                                جزییات بازخورد
+                                            </label>
+                                            <div>
+                                                <span
+                                                    x-html="bodyCharecterCounter($refs.countme.maxLength - count)">۲۸۰</span>
+                                                کارکتر
+                                            </div>
+                                        </div>
+
+                                        <textarea cols="30" rows="5" maxlength="280" id="contactMessage"
+                                            name="feedback-body" class="contact-form-control outline-none mb-2"
+                                            placeholder="جزییات باگ" x-ref="countme"
+                                            x-on:keyup="count = $refs.countme.value.length"
+                                            x-validate.bluronlye="()=> checkBody($el)" required=""
+                                            data-error-msg="متن وارد شده باید بین ۵ تا ۲۸۰ کارکتر باشد"
+                                            aria-errormessage="error-msg-contactMessage"></textarea>
+                                    </div>
+
+                                    <div class="col-span-2 items-center">
+                                        <div class="flex justify-between flex-col sm:flex-row gap-2 items-center">
+                                            <span x-html="formMsg" class="formMsg text-center sm:text-start">* پر کردن
+                                                قسمت‌های ستاره‌دار ضروری است.</span>
+                                            <button
+                                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center gap-2 text-white text-sm min-w-fit disabled:bg-gray-200 disabled:cursor-not-allowed">
+                                                ارسال درخواست
+                                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                                    draggable="false" loading="lazy" width="" height=""
+                                                    class="ltr:rotate-180" onerror="this.remove()">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div :class="{ 'active': activeTab === 4 }" x-show="activeTab === 4"
+                            class="grid grid-cols-4  gap-8 xl:gap-4" tabindex="0">
+                            <div class="col-span-4 xl:col-span-1 z-10">
+                                <div class="flex flex-col gap-4 mb-6">
+                                    <img src="https://www.arvancloud.ir/images/v6/contact/bug-report.svg"
+                                        alt="گزارش باگ" draggable="false" loading="lazy" width="40" height="40"
+                                        class="mx-5" onerror="this.remove()">
+                                    <span
+                                        class="font-semibold text-xl text-gray-800 rtl:border-r-2 ltr:border-l-2 border-teal-600 px-5">
+                                        گزارش باگ
+                                    </span>
+                                </div>
+
+                                <div class="font-medium text-sm text-gray-500 px-5">
+                                    ممکن است در زمان کار با محصولات، سرویس‌ها یا وب‌سایت ابر آروان به مشکل یا باگی بر
+                                    بخورید و یا پیشنهادی فنی برای بهبود ارایه خدمات ابری ما داشته باشید. با پر کردن این
+                                    فرم می‌توانید مشکلات یا بازخوردهای خود را گزارش کنید.
+                                </div>
+                            </div>
+
+                            <div class="col-span-4 xl:col-span-3 bg-white border border-gray-50 shadow-3xl rounded-2xl md:p-12 px-6 py-12 z-10"
+                                x-data="contactForm">
+                                <form class="grid grid-cols-2 gap-6" x-data="validator"
+                                    @submit.prevent="callCenter($el)" id="bug-report">
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactFullName" class="contact-form-label requerd mb-2">
+                                            نام و نام خانوادگی
+                                        </label>
+
+                                        <input type="text" name="bug-report-name" id="bugReportName"
+                                            class="contact-form-control outline-none mb-2"
+                                            placeholder="نام و نام خانوادگی" x-validate.bluronly="()=> checkName($el)"
+                                            required="" data-error-msg="نام و نام خانوادگی نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportName"><span class="error-msg"
+                                            id="error-msg-bugReportName" hidden="">نام و نام خانوادگی نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactEmail" class="contact-form-label requerd mb-2">
+                                            ایمیل
+                                        </label>
+
+                                        <input type="text" name="bug-report-email" id="bugReportEmail"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="email@example.com"
+                                            x-validate.bluronly="()=> checkEmail($el)" required=""
+                                            data-error-msg="ایمیل نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportEmail"><span class="error-msg"
+                                            id="error-msg-bugReportEmail" hidden="">ایمیل نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactMobile" class="contact-form-label requerd mb-2">
+                                            شماره همراه
+                                        </label>
+
+                                        <input type="phone" name="bug-report-mobile" id="contactMobile"
+                                            class="contact-form-control text-left placeholder:text-left outline-none mb-2"
+                                            dir="ltr" placeholder="09100100000"
+                                            x-validate.bluronly="()=> checkPhoneNumber($el)" required=""
+                                            data-error-msg="شماره نامعتبر است"
+                                            aria-errormessage="error-msg-contactMobile"><span class="error-msg"
+                                            id="error-msg-contactMobile" hidden="">شماره نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2 lg:col-span-1">
+                                        <label for="contactTopic" class="contact-form-label requerd mb-2">
+                                            موضوع
+                                        </label>
+
+                                        <input type="text" id="bugReportSubject" name="bug-report-subject"
+                                            class="contact-form-control outline-none mb-2" placeholder="موضوع"
+                                            x-validate.bluronly="()=> checksubject($el, 'موضوع')" required=""
+                                            data-error-msg="موضوع نامعتبر است"
+                                            aria-errormessage="error-msg-bugReportSubject"><span class="error-msg"
+                                            id="error-msg-bugReportSubject" hidden="">موضوع نامعتبر است</span>
+                                    </div>
+
+                                    <div class="col-span-2" x-data="{ count: 0 }"
+                                        x-init="count = $refs.countme.value.length">
+                                        <div class="mt-2 flex justify-between">
+                                            <label for="contactMessage" class="contact-form-label requerd block mb-2">
+                                                جزییات باگ
+                                            </label>
+                                            <div>
+                                                <span
+                                                    x-html="bodyCharecterCounter($refs.countme.maxLength - count)">۲۸۰</span>
+                                                کارکتر
+                                            </div>
+                                        </div>
+
+                                        <textarea cols="30" rows="5" maxlength="280" id="contactMessage"
+                                            name="bug-report-body" class="contact-form-control outline-none mb-2"
+                                            placeholder="جزییات باگ" x-ref="countme"
+                                            x-on:keyup="count = $refs.countme.value.length"
+                                            x-validate.bluronlye="()=> checkBody($el)" required=""
+                                            data-error-msg="متن وارد شده باید بین ۵ تا ۲۸۰ کارکتر باشد"
+                                            aria-errormessage="error-msg-contactMessage"></textarea><span
+                                            class="error-msg" id="error-msg-contactMessage" hidden="">متن وارد شده باید
+                                            بین ۵ تا ۲۸۰ کارکتر باشد</span>
+                                    </div>
+
+                                    <div class="col-span-2 items-center">
+                                        <div class="flex justify-between flex-col sm:flex-row gap-2 items-center">
+                                            <span x-html="formMsg" class="formMsg text-center sm:text-start">* پر کردن
+                                                قسمت‌های ستاره‌دار ضروری است.</span>
+                                            <button
+                                                class="bg-teal-600 rounded-lg h-10 py-3 px-6 inline-flex justify-center items-center gap-2 text-white text-sm min-w-fit disabled:bg-gray-200 disabled:cursor-not-allowed">
+                                                ارسال درخواست
+                                                <img src="https://www.arvancloud.ir/images/v6/svg/arrow.svg" alt="Arrow"
+                                                    draggable="false" loading="lazy" width="" height=""
+                                                    class="ltr:rotate-180" onerror="this.remove()">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span
+                    class="text-red-500 !border-red-500 hidden items-center gap-1 text-xs !border-2 h-auto pointer-events-none cursor-not-allowed"
+                    hidden=""></span>
+            </div>
+        </section>
+        <section class="contact__branches">
+            <div class=" container px-8 xl:px-12 mx-auto">
+                <div
+                    class="contact__branches-card rounded-3xl py-14 rtl:pl-6 ltr:pr-6 rtl:pr-10 ltr:pl-10 lg:py-14 ltr:lg:pl-16 rtl:lg:pr-16 ltr:lg:pr-14 rtl:lg:pl-14 relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 relative z-10">
+                        <div>
+                            <div class="font-semibold text-[28px] lg:text-4xl text-start text-white mb-[72px] lg:mb-0">
+                                نشانی ابر آروان
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:items-center">
+                            <div class="order-first">
+                                <img src="https://www.arvancloud.ir/images/flags/iran.svg" alt="" draggable="false"
+                                    loading="lazy" width="" height="" class="mb-6" onerror="this.remove()">
+                                <div
+                                    class="font-semibold text-lg text-start text-teal-500 relative before:content-[''] before:absolute before:block before:w-[0.125rem] before:h-6 before:bg-teal-600 rtl:before:-right-4 ltr:before:-left-4 mb-4">
+                                    تهران - ایران
+                                </div>
+                                <div class="font-medium text-base text-start text-white mb-4 min-h-[3rem]">
+                                    تهران، کاووسيه، خیابان وحيد دستگردی، پلاک ۲۴۷
+                                </div>
+                                <div class="flex items-center mb-12 lg:mb-0">
+                                    <div class="text-teal-500 rtl:ml-2 ltr:mr-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.333052 10.2788V12.2788C0.332298 12.4644 0.37033 12.6482 0.444712 12.8183C0.519094 12.9884 0.628185 13.1412 0.765 13.2667C0.901814 13.3922 1.06334 13.4878 1.23922 13.5472C1.4151 13.6067 1.60147 13.6288 1.78639 13.6121C3.83783 13.3892 5.80839 12.6882 7.53972 11.5654C9.1505 10.5419 10.5162 9.17621 11.5397 7.56543C12.6664 5.82623 13.3676 3.84609 13.5864 1.78543C13.603 1.60107 13.5811 1.41527 13.5221 1.23985C13.463 1.06442 13.368 0.903222 13.2432 0.76651C13.1184 0.629798 12.9665 0.520569 12.7972 0.445777C12.6279 0.370986 12.4448 0.33227 12.2597 0.332096H10.2597C9.93618 0.328912 9.62252 0.443482 9.37721 0.654451C9.1319 0.86542 8.97167 1.15839 8.92639 1.47876C8.84197 2.11881 8.68542 2.74725 8.45972 3.3521C8.37002 3.59071 8.35061 3.85004 8.40378 4.09935C8.45695 4.34866 8.58048 4.5775 8.75972 4.75876L9.60639 5.60543C8.65735 7.27446 7.27542 8.65639 5.60639 9.60543L4.75972 8.75876C4.57846 8.57952 4.34962 8.456 4.10031 8.40283C3.851 8.34966 3.59167 8.36907 3.35305 8.45876C2.7482 8.68446 2.11976 8.84101 1.47972 8.92543C1.15587 8.97112 0.860118 9.13423 0.648697 9.38376C0.437276 9.63329 0.32494 9.95181 0.333052 10.2788Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+                                    <a href="tel:+982191019999"
+                                        class="font-semibold text-base text-teal-600 rtl:ml-4 ltr:mr-4" dir="ltr">
+                                        ۰۲۱-۹۱۰۱۹۹۹۹
+                                    </a>
+                                    <a href="tel:+982191039999" class="font-semibold text-base text-teal-600" dir="ltr">
+                                        ۰۲۱-۹۱۰۳۹۹۹۹
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <img src="https://www.arvancloud.ir/images/v6/contact/map-mobile.svg" alt="" draggable="false"
+                        loading="lazy" width="" height=""
+                        class="absolute top-0 rtl:right-0 ltr:left-0 ltr:md:right-0 ltr:md:left-[unset] z-0 block lg:hidden w-full md:w-auto opacity-50 "
+                        onerror="this.remove()">
+                    <img src="https://www.arvancloud.ir/images/v6/contact/map.svg" alt="" draggable="false"
+                        loading="lazy" width="500px" height="300px"
+                        class="hidden lg:block absolute rtl:right-9 ltr:left-6 top-0 scale-125" onerror="this.remove()">
+                </div>
+            </div>
+        </section>
+        <section class="relative py-24 lg:py-32 bg-gray-50" id="">
+
+
+            <div class=" container px-8 xl:px-12 mx-auto">
+                <div class="flex flex-col">
+                    <div class="font-medium text-teal-500 text-base mb-4 z-10">
+                        تماس با سایر تیم‌ها
+                    </div>
+
+                    <div class="font-semibold text-gray-900 text-3xl mb-6 z-10">
+                        ارتباط مستقیم با دپارتمان‌های مختلف ابر آروان
+                    </div>
+
+                    <p class="font-normal text-lg text-gray-600 mb-16 z-10">
+                        شما می‌توانید علاوه‌بر برقراری ارتباط با ما از طریق این صفحه، با ارسال ایمیل، سایر درخواست‌های
+                        خود را به واحدهای مختلف ابر آروان بفرستید. همکاران و کارشناسان ما در هر بخش، به سرعت پاسخ‌گوی
+                        پرسش‌های شما در زمینه‌های مختلف
+                        <a href="https://www.arvancloud.ir/fa" title="زیرساخت ابری"> زیرساخت ابری </a>خواهند بود.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+
+                    <div
+                        class="bg-white border-2 border-gray-50 rounded-xl px-6 py-8 flex flex-col hover:border-teal-500 transition h-fit z-10">
+                        <img src="https://www.arvancloud.ir/images/v6/svg/people.svg" alt="" draggable="false"
+                            loading="lazy" width="48" height="48" class="mb-5 min-h-[48px]" onerror="this.remove()">
+
+                        <div>
+                            <div class="text-gray-800 font-medium text-xl mb-2">
+                                فرهنگ و استخدام
+                            </div>
+
+                            <a href="mailto:we@arvancloud.ir" class="text-teal-600 font-semibold text-xl">
+                                we@arvancloud.ir
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white border-2 border-gray-50 rounded-xl px-6 py-8 flex flex-col hover:border-teal-500 transition h-fit z-10">
+                        <img src="https://www.arvancloud.ir/images/v6/svg/pr.svg" alt="" draggable="false"
+                            loading="lazy" width="48" height="48" class="mb-5 min-h-[48px]" onerror="this.remove()">
+
+                        <div>
+                            <div class="text-gray-800 font-medium text-xl mb-2">
+                                روابط عمومی
+                            </div>
+
+                            <a href="mailto:pr@arvancloud.ir" class="text-teal-600 font-semibold text-xl">
+                                pr@arvancloud.ir
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white border-2 border-gray-50 rounded-xl px-6 py-8 flex flex-col hover:border-teal-500 transition h-fit z-10">
+                        <img src="https://www.arvancloud.ir/images/v6/svg/tech-support.svg" alt="" draggable="false"
+                            loading="lazy" width="48" height="48" class="mb-5 min-h-[48px]" onerror="this.remove()">
+
+                        <div>
+                            <div class="text-gray-800 font-medium text-xl mb-2">
+                                پشتیبانی فنی
+                            </div>
+
+                            <a href="mailto:support@arvancloud.ir" class="text-teal-600 font-semibold text-xl">
+                                support@arvancloud.ir
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white border-2 border-gray-50 rounded-xl px-6 py-8 flex flex-col hover:border-teal-500 transition h-fit z-10">
+                        <img src="https://www.arvancloud.ir/images/v6/svg/finance.svg" alt="" draggable="false"
+                            loading="lazy" width="48" height="48" class="mb-5 min-h-[48px]" onerror="this.remove()">
+
+                        <div>
+                            <div class="text-gray-800 font-medium text-xl mb-2">
+                                مالی و حسابداری
+                            </div>
+
+                            <a href="mailto:finance@arvancloud.ir" class="text-teal-600 font-semibold text-xl">
+                                finance@arvancloud.ir
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/alpinejs.min.js"></script>
+    <script>
+        function chooseItem(item) {
+            this.value = item;
+            this.active = false;
+        }
+    </script>
+</body>
+
+</html>

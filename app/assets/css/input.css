@@ -1,29 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: yekanbakh-fa;
   font-style: normal;
   src: url("../../fonts/YekanBakhFaNum-VF.woff2") format("woff2");
+}
+.font-yekanbakh{
+  font-variation-settings: "DOTS" 1;
 }
 
 @layer components {
   .header-menu-button {
     @apply opacity-100 items-center rounded-lg hover:bg-gray-100 flex gap-3 text-lg justify-center px-2 py-2 hover:opacity-100 transition-all duration-150 cursor-pointer;
   }
+
   .header-menu-button.active {
     @apply bg-[#fff4e5] text-[#b3874b];
   }
+
   .custom-transition {
     @apply transition-all duration-150 ease-in-out;
   }
+
   .header-dropdown {
-    @apply items-center	bg-slate-50 shadow-xl flex
-		left-0 overflow-hidden right-0 duration-200 transition-all w-[860px];
+    @apply items-center bg-slate-50 shadow-xl flex left-0 overflow-hidden right-0 duration-200 transition-all w-[860px];
   }
+
   .header-dropdown a:hover {
     @apply bg-[#fff4e5] text-[#b3874b];
   }
+
   .header-mobile-panel {
     --tw-bg-opacity: 1;
     background-color: rgb(245 247 250 / var(--tw-bg-opacity));
@@ -39,12 +47,56 @@
     width: 100%;
     z-index: 50;
   }
+
   .header-mobile-panel .primary-menu {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     margin-bottom: 0.25rem;
     padding: 2.5rem 1rem 2.25rem;
   }
+
+  .contact-form-control {
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border-color: rgb(178 194 214 / var(--tw-border-opacity));
+    border-radius: .5rem;
+    border-width: 1px;
+    display: block;
+    font-weight: 500;
+    height: 3rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    transition-duration: .1s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    width: 100%;
+  }
+
+  .contact-form-dropdonw-menu,
+  .enterprise-form-dropdonw-menu {
+    border-radius: .5rem;
+    border-width: 1px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: .25rem;
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .contact-form-dropdonw-menu {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  textarea.contact-form-control,
+  textarea.csr-form-control {
+    height: auto;
+    padding: .75rem;
+  }
+
   .header-mobile-panel .primary-menu .item {
     display: flex;
     flex-direction: column;
@@ -52,25 +104,42 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  @media (min-width: 1024px) {
+    .contact__branches-card {
+      -webkit-backdrop-filter: blur(300px);
+      backdrop-filter: blur(300px);
+      background: linear-gradient(270deg, #fff -2.14%, #0c7472 0, #026d6d 24.11%, #041215 83.37%);
+    }
+  }
+
+  .contact__branches-card {
+    background: linear-gradient(180deg, #105151, #256f6e 24%, #001215 86%);
+  }
+
   .products-banner {
     background: linear-gradient(90deg, #064e4b, #062023 64%);
   }
+
   .footer-link {
     @apply text-gray-600 hover:text-gray-800 font-semibold text-sm;
   }
+
   .home-products__tab-content,
   .home-products__tab-image {
     animation: translateY 0.6s cubic-bezier(0.22, 0.61, 0.63, 0.85);
   }
+
   @keyframes translateY {
     0% {
       opacity: 0;
       transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-}
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
