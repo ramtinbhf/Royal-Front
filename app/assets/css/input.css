@@ -25,10 +25,10 @@
   }
 
   .header-dropdown {
-    @apply items-center bg-slate-50 shadow-xl flex left-0 overflow-hidden right-0 duration-200 transition-all w-[860px];
+    @apply bg-slate-50 shadow-xl flex left-0 overflow-hidden right-0 duration-200 transition-all w-[860px];
   }
 
-  .header-dropdown a:hover {
+  .header-dropdown-right a:hover {
     @apply bg-[#fff4e5] text-[#b3874b];
   }
 

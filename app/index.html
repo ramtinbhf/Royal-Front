@@ -19,16 +19,12 @@
             </div>
           </div>
           <div class="w-full flex items-center justify-end gap-8" x-bind:class=" active && 'active z-40'">
-            <div class="hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
-              <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
-              <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
-            </div>
             <button title="menu-mobile" class="w-6 h-6 focus:outline-none xl:hidden" x-on:click=" active = !active ">
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out mb-3" :class="{'rotate-45 translate-y-0.5': active, 'mb-3': !active}"></span>
               <span class="block h-0.5 w-6 bg-black transform transition duration-200 ease-in-out" :class="{'-rotate-45': active}"></span>
             </button>
           </div>
-          <!-- panel -->
+          <!-- mobile Menu -->
           <div x-show="active" class="header-mobile-panel active" :class="{'active': active}">
             <div>
               <ul class="mt-2 header-mobile-submenu-active" :class="activePanel !== null && 'header-mobile-submenu-active' " x-data="{activePanel: null}">
@@ -226,141 +222,170 @@
             </div>
           </div>
         </div>
-        <div class="container mx-auto hidden xl:block">
-          <ul class="flex items-center gap-9">
-            <li class="relative" x-data="{ active : false }">
-              <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
-                <span>ویزا</span>
-                <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
-                  <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <!-- sub menu -->
-              <nav class="absolute right-0 top-14" x-show="active" x-cloak>
-                <div class="header-dropdown text-gray-900 flex">
-                  <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
-                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">ویزاهای ویژه<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                  </div>
-                  <div class="w-2/3"></div>
+        <!-- desktop menu -->
+        <div class="container mx-auto hidden xl:flex items-center justify-between px-8 xl:px-12">
+          <div>
+            <ul class="flex items-center gap-9">
+              <li class="relative" x-data="{ active : false }">
+                <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
+                  <span>ویزا</span>
+                  <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                    <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
                 </div>
-              </nav>
-            </li>
-            <li class="relative" x-data="{ active : false }">
-              <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
-                <span>مهاجرت و اقامت</span>
-                <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
-                  <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <!-- sub menu -->
-              <nav class="absolute right-0 top-14" x-show="active" x-cloak>
-                <div class="header-dropdown text-gray-900 flex">
-                  <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
-                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">اقامت های ویژه <span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
+                <!-- sub menu -->
+                <nav class="absolute right-0 top-12" x-show="active" x-cloak>
+                  <div class="header-dropdown text-gray-900 flex">
+                    <div class="bg-white w-1/3 p-8 flex flex-col gap-4 header-dropdown-right">
+                      <div class="text-xs w-full flex text-[#BA9B6F] justify-start items-center gap-2">ویزاهای ویژه<span class="border-b-[1px] border-gray-300 w-36"></span></div>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی انگلیس</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                    </div>
+                    <div class="w-2/3 p-8">
+                      <div class="flex flex-col gap-4">
+                        <div class="text-xs w-full flex text-[#BA9B6F] justify-start items-center gap-4">دسته‌بندی ویزا<span class="border-b-[1px] border-gray-300 w-3/4"></span></div>
+                        <div class="grid grid-cols-2 gap-8">
+                          <div class="flex flex-col gap-4">
+                            <span class="text-xs font-bold">ویزای اروپا</span>
+                            <ul class="space-y-4">
+                              <li class="text-xs text-gray-500"><a href="">ویزای ایتالیا</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای فرانسه</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای اسپانیا</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای آلمان</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای سوئیس</a></li>
+                            </ul>
+                          </div>
+                          <div class="flex flex-col gap-4">
+                            <span class="text-xs font-bold">ویزای خاورمیانه</span>
+                            <ul class="space-y-4">
+                              <li class="text-xs text-gray-500"><a href="">ویزای دبی</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای کویت</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای عمان</a></li>
+                            </ul>
+                          </div>
+                          <div class="flex flex-col gap-4">
+                            <span class="text-xs font-bold">ویزای آمریکا</span>
+                            <ul class="space-y-4">
+                              <li class="text-xs text-gray-500"><a href="">ویزای آمریکا</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای کانادا</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای مکزیک</a></li>
+                            </ul>
+                          </div>
+                          <div class="flex flex-col gap-4">
+                            <span class="text-xs font-bold">ویزای آسیا</span>
+                            <ul class="space-y-4">
+                              <li class="text-xs text-gray-500"><a href="">ویزای چین</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای ژاپن</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای تایلند</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای مالزی</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای سنگاپور</a></li>
+                              <li class="text-xs text-gray-500"><a href="">ویزای کره جنوبی</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="w-2/3"></div>
+                </nav>
+              </li>
+              <li class="relative" x-data="{ active : false }">
+                <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
+                  <span>مهاجرت و اقامت</span>
+                  <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                    <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
                 </div>
-              </nav>
-            </li>
-            <li class="relative" x-data="{ active : false }">
-              <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
-                <span>پذیرش تحصیلی</span>
-                <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
-                  <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <!-- sub menu -->
-              <nav class="absolute right-0 top-14" x-show="active" x-cloak>
-                <div class="header-dropdown text-gray-900 flex">
-                  <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
-                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">ویزاهای تحصیلی ویژه<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
+                <!-- sub menu -->
+                <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                  <div class="header-dropdown text-gray-900 flex">
+                    <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                      <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">اقامت های ویژه <span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                    </div>
+                    <div class="w-2/3"></div>
                   </div>
-                  <div class="w-2/3"></div>
+                </nav>
+              </li>
+              <li class="relative" x-data="{ active : false }">
+                <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
+                  <span>پذیرش تحصیلی</span>
+                  <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
+                    <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
                 </div>
-              </nav>
-            </li>
-            <li class="relative" x-data="{ active : false }">
-              <div class="header-menu-button" @click="active = !active" @click.away="active = false" :class="active ? 'active' : ''">
-                <span>فرم ها و مدارک ها</span>
-                <svg class="custom-transition" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" x-bind:class="{'rotate-180':active}">
-                  <path d="M1 1L5 5L9 1" class="stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <!-- sub menu -->
-              <nav class="absolute right-0 top-14" x-show="active" x-cloak>
-                <div class="header-dropdown text-gray-900 flex">
-                  <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
-                    <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">مستندات فنی<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
-                    <a href="#" class="flex p-2 rounded-lg">
-                      <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
-                    </a>
+                <!-- sub menu -->
+                <nav class="absolute right-0 top-14" x-show="active" x-cloak>
+                  <div class="header-dropdown text-gray-900 flex">
+                    <div class="bg-white w-1/3 p-8 flex flex-col gap-4">
+                      <div class="text-xs w-full flex text-[#BA9B6F] justify-between items-center">ویزاهای تحصیلی ویژه<span class="border-b-[1px] border-gray-400 w-1/2"></span></div>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                      <a href="#" class="flex p-2 rounded-lg">
+                        <div class="flex flex-col font-semibold gap-2">ویزای انگلیس<span class="text-xs text-gray-500 hover:text-gray-500">ویزای 10 ساله توریستی</span></div>
+                      </a>
+                    </div>
+                    <div class="w-2/3"></div>
                   </div>
-                  <div class="w-2/3"></div>
+                </nav>
+              </li>
+
+              <li class="relative">
+                <div class="header-menu-button">
+                  <span>فرم ها و مدارک ها</span>
                 </div>
-              </nav>
-            </li>
-            <li class="relative">
-              <div class="header-menu-button">
-                <span>تماس با ما</span>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li class="relative">
+                <div class="header-menu-button">
+                  <span>تماس با ما</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden sm:flex h-10 cursor-pointer items-center rounded-lg border border-[#BA9B6F] pl-6 pr-[21px]">
+            <span class="border-l border-gray-600 pl-[18px] text-base font-medium text-gray-800">ورود</span>
+            <span class="whitespace-nowrap pr-[22px] text-base font-medium text-gray-800">عضویت</span>
+          </div>
         </div>
       </nav>
     </header>
+    <!-- notification -->
     <div class="hidden md:block">
       <div class="w-full static top-[7.5rem] -z-[1] bg-gray-800 text-white py-3 mb-[1px]">
-              <div class="px-8 xl:container mx-auto">
-                  <div class="flex gap-x-3">
-                      <div class="bg-[#ff0066] text-xs text-white px-3 py-1 rounded-[4px] hidden md:block cursor-default">
-                          تا ۵۰ درصد تخفیف
-                      </div>
-                      <a href="#" class="text-white text-base">
-                          سرور اختصاصی ابری آروان‌کلاد با تخفیف ویژه!
-                      </a>
-                      <img src="./images/arrow-left-w.svg" alt="arrow" width="24" height="24">
-                  </div>
-              </div>
+        <div class="px-8 xl:container mx-auto">
+          <div class="flex gap-x-3">
+            <div class="bg-[#ff0066] text-xs text-white px-3 py-1 rounded-[4px] hidden md:block cursor-default">تا ۵۰ درصد تخفیف</div>
+            <a href="#" class="text-white text-base"> سرور اختصاصی ابری آروان‌کلاد با تخفیف ویژه! </a>
+            <img src="./images/arrow-left-w.svg" alt="arrow" width="24" height="24" />
           </div>
+        </div>
       </div>
+    </div>
+    <!-- slider -->
     <section>
       <div>
         <img src="./images/d13d19a4-b9d7-4779-9fde5d-3d1ecd4e3e4b.jpg" alt="" />
       </div>
     </section>
+    <!-- content -->
     <section class="relative py-24 lg:py-32 home__products bg-[#F3F8FC] overflow-hidden">
       <div class="container px-8 xl:px-12 mx-auto">
         <div class="flex flex-col">
@@ -382,7 +407,7 @@
                 <div class="home-products__tab-content col-span-4 lg:w-2/4 xl:max-w-[33rem] z-10">
                   <div class="flex flex-col gap-6 mb-6 xl:mb-9">
                     <img src="./images/schengen.svg" alt="سریع و آسان سرور بسازید" draggable="false" loading="lazy" width="" height="" class="rtl:mr-4 ml-4 w-10 h-10 xl:w-12 xl:h-12" onerror="this.remove()" />
-                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4"> ویزای شینگن سریع و آسان</div>
+                    <div class="font-semibold text-2xl text-green-800 rtl:border-r-2 ltr:border-l-2 border-green-600 px-4">ویزای شینگن سریع و آسان</div>
                   </div>
                   <div class="text-base text-gray-600 mb-10">آیا با تعریف کلی شنگن آشنایی دارید؟ آیا می‌دانید ویزای شینگن چیست و چه مزایای برای شما دارد؟ آیا تا به حال برای یکی از انواع مختلف ویزا شینگن درخواست داده‌اید و از جزئیات مدارک و شرایط اپلای ویزای شنگن باخبر هستید؟ اگر اطلاعات کمی در مورد این مجوز مهم و کاربردی قاره اروپا دارید و مایل به کسب اطلاعات بیشتر در این زمینه هستید، همراه ما باشید.</div>
                   <a href="https://www.arvancloud.ir/fa/products/cloud-server" class="section-btn text-lg font-semibold text-teal-600 flex gap-x-2 mb-4 xl:mb-0 z-10" id="home-products_cloud-server-more-btn">
@@ -391,7 +416,7 @@
                   </a>
                 </div>
                 <div class="home-products__tab-image w-full xl:w-2/4 relative left-0 xl:absolute rtl:left-0 ltr:right-0 z-10">
-                  <img src="./images/europe_france_map_3d_render copy.webp" alt="سریع و آسان سرور بسازید"  />
+                  <img src="./images/europe_france_map_3d_render copy.webp" alt="سریع و آسان سرور بسازید" />
                 </div>
               </div>
             </div>
@@ -704,16 +729,16 @@
           if (this.open) {
               return this.close()
           }
-  
+
           this.$refs.button.focus()
-  
+
           this.open = true
       },
       close(focusAfter) {
           if (!this.open) return
-  
+
           this.open = false
-  
+
           focusAfter &amp;&amp; focusAfter.focus()
       }
   }"
@@ -753,7 +778,7 @@
             </div>
             <div class="flex items-center ltr:order-1">
               <a class="text-green-500 hover:text-teal-600 transition" href="#" aria-label="ArvanCloud Logo">
-                <img src="./images/logo.svg" alt="">
+                <img src="./images/logo.svg" alt="" />
               </a>
             </div>
           </div>
